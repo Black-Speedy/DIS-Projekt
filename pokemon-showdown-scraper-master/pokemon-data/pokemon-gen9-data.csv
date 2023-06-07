@@ -1,0 +1,106 @@
+Pokemon, Number, Type1, Type2, Ability1, Ability2, Ability3, HP, Attack, Defense, Sp. Atk, Sp. Def, Speed, Sprite
+Sprigatito,906,GRASS,none,Overgrow,Protean,none,40,61,54,45,45,65,https://play.pokemonshowdown.com/sprites/gen5/sprigatito.png
+Floragato,907,GRASS,none,Overgrow,Protean,none,61,80,63,60,63,83,https://play.pokemonshowdown.com/sprites/gen5/floragato.png
+Meowscarada,908,GRASS,DARK,Overgrow,Protean,none,76,110,70,81,70,123,https://play.pokemonshowdown.com/sprites/gen5/meowscarada.png
+Fuecoco,909,FIRE,none,Blaze,Unaware,none,67,45,59,63,40,36,https://play.pokemonshowdown.com/sprites/gen5/fuecoco.png
+Crocalor,910,FIRE,none,Blaze,Unaware,none,81,55,78,90,58,49,https://play.pokemonshowdown.com/sprites/gen5/crocalor.png
+Skeledirge,911,FIRE,GHOST,Blaze,Unaware,none,104,75,100,110,75,66,https://play.pokemonshowdown.com/sprites/gen5/skeledirge.png
+Quaxly,912,WATER,none,Torrent,Moxie,none,55,65,45,50,45,50,https://play.pokemonshowdown.com/sprites/gen5/quaxly.png
+Quaxwell,913,WATER,none,Torrent,Moxie,none,70,85,65,65,60,65,https://play.pokemonshowdown.com/sprites/gen5/quaxwell.png
+Quaquaval,914,WATER,FIGHTING,Torrent,Moxie,none,85,120,80,85,75,85,https://play.pokemonshowdown.com/sprites/gen5/quaquaval.png
+Lechonk,915,NORMAL,none,Aroma Veil,Gluttony,Thick Fat,54,45,40,35,45,35,https://play.pokemonshowdown.com/sprites/gen5/lechonk.png
+Oinkologne,916,NORMAL,none,Lingering Aroma,Gluttony,Thick Fat,110,100,75,59,80,65,https://play.pokemonshowdown.com/sprites/gen5/oinkologne.png
+Tarountula,917,BUG,none,Insomnia,Stakeout,none,35,41,45,29,40,20,https://play.pokemonshowdown.com/sprites/gen5/tarountula.png
+Spidops,918,BUG,none,Insomnia,Stakeout,none,60,79,92,52,86,35,https://play.pokemonshowdown.com/sprites/gen5/spidops.png
+Nymble,919,BUG,none,Swarm,Tinted Lens,none,33,46,40,21,25,45,https://play.pokemonshowdown.com/sprites/gen5/nymble.png
+Lokix,920,BUG,DARK,Swarm,Tinted Lens,none,71,102,78,52,55,92,https://play.pokemonshowdown.com/sprites/gen5/lokix.png
+Pawmi,921,ELECTRIC,none,Static,Natural Cure,Iron Fist,45,50,20,40,25,60,https://play.pokemonshowdown.com/sprites/gen5/pawmi.png
+Pawmo,922,ELECTRIC,FIGHTING,Volt Absorb,Natural Cure,Iron Fist,60,75,40,50,40,85,https://play.pokemonshowdown.com/sprites/gen5/pawmo.png
+Pawmot,923,ELECTRIC,FIGHTING,Volt Absorb,Natural Cure,Iron Fist,70,115,70,70,60,105,https://play.pokemonshowdown.com/sprites/gen5/pawmot.png
+Tandemaus,924,NORMAL,none,Run Away,Pickup,Own Tempo,50,50,45,40,45,75,https://play.pokemonshowdown.com/sprites/gen5/tandemaus.png
+Maushold,925,NORMAL,none,Friend Guard,Cheek Pouch,Technician,74,75,70,65,75,111,https://play.pokemonshowdown.com/sprites/gen5/maushold.png
+Fidough,926,FAIRY,none,Own Tempo,Klutz,none,37,55,70,30,55,65,https://play.pokemonshowdown.com/sprites/gen5/fidough.png
+Dachsbun,927,FAIRY,none,Well-Baked Body,Aroma Veil,none,57,80,115,50,80,95,https://play.pokemonshowdown.com/sprites/gen5/dachsbun.png
+Smoliv,928,GRASS,NORMAL,Early Bird,Harvest,none,41,35,45,58,51,30,https://play.pokemonshowdown.com/sprites/gen5/smoliv.png
+Dolliv,929,GRASS,NORMAL,Early Bird,Harvest,none,52,53,60,78,78,33,https://play.pokemonshowdown.com/sprites/gen5/dolliv.png
+Arboliva,930,GRASS,NORMAL,Seed Sower,Harvest,none,78,69,90,125,109,39,https://play.pokemonshowdown.com/sprites/gen5/arboliva.png
+Squawkabilly,931,NORMAL,FLYING,Intimidate,Hustle,Guts,82,96,51,45,51,92,https://play.pokemonshowdown.com/sprites/gen5/squawkabilly.png
+Nacli,932,ROCK,none,Purifying Salt,Sturdy,Clear Body,55,55,75,35,35,25,https://play.pokemonshowdown.com/sprites/gen5/nacli.png
+Naclstack,933,ROCK,none,Purifying Salt,Sturdy,Clear Body,60,60,100,35,65,35,https://play.pokemonshowdown.com/sprites/gen5/naclstack.png
+Garganacl,934,ROCK,none,Purifying Salt,Sturdy,Clear Body,100,100,130,45,90,35,https://play.pokemonshowdown.com/sprites/gen5/garganacl.png
+Charcadet,935,FIRE,none,Flash Fire,Flame Body,none,40,50,40,50,40,35,https://play.pokemonshowdown.com/sprites/gen5/charcadet.png
+Armarouge,936,FIRE,PSYCHIC,Flash Fire,Weak Armor,none,85,60,100,125,80,75,https://play.pokemonshowdown.com/sprites/gen5/armarouge.png
+Ceruledge,937,FIRE,GHOST,Flash Fire,Weak Armor,none,75,125,80,60,100,85,https://play.pokemonshowdown.com/sprites/gen5/ceruledge.png
+Tadbulb,938,ELECTRIC,none,Own Tempo,Static,Damp,61,31,41,59,35,45,https://play.pokemonshowdown.com/sprites/gen5/tadbulb.png
+Bellibolt,939,ELECTRIC,none,Electromorphosis,Static,Damp,109,64,91,103,83,45,https://play.pokemonshowdown.com/sprites/gen5/bellibolt.png
+Wattrel,940,ELECTRIC,FLYING,Wind Power,Volt Absorb,Competitive,40,40,35,55,40,70,https://play.pokemonshowdown.com/sprites/gen5/wattrel.png
+Kilowattrel,941,ELECTRIC,FLYING,Wind Power,Volt Absorb,Competitive,70,70,60,105,60,125,https://play.pokemonshowdown.com/sprites/gen5/kilowattrel.png
+Maschiff,942,DARK,none,Intimidate,Run Away,Stakeout,60,78,60,40,51,51,https://play.pokemonshowdown.com/sprites/gen5/maschiff.png
+Mabosstiff,943,DARK,none,Intimidate,Guard Dog,Stakeout,80,120,90,60,70,85,https://play.pokemonshowdown.com/sprites/gen5/mabosstiff.png
+Shroodle,944,POISON,NORMAL,Unburden,Pickpocket,Prankster,40,65,35,40,35,75,https://play.pokemonshowdown.com/sprites/gen5/shroodle.png
+Grafaiai,945,POISON,NORMAL,Unburden,Poison Touch,Prankster,63,95,65,80,72,110,https://play.pokemonshowdown.com/sprites/gen5/grafaiai.png
+Bramblin,946,GRASS,GHOST,Wind Rider,Infiltrator,none,40,65,30,45,35,60,https://play.pokemonshowdown.com/sprites/gen5/bramblin.png
+Brambleghast,947,GRASS,GHOST,Wind Rider,Infiltrator,none,55,115,70,80,70,90,https://play.pokemonshowdown.com/sprites/gen5/brambleghast.png
+Toedscool,948,GROUND,GRASS,Mycelium Might,none,none,40,40,35,50,100,70,https://play.pokemonshowdown.com/sprites/gen5/toedscool.png
+Toedscruel,949,GROUND,GRASS,Mycelium Might,none,none,80,70,65,80,120,100,https://play.pokemonshowdown.com/sprites/gen5/toedscruel.png
+Klawf,950,ROCK,none,Anger Shell,Shell Armor,Regenerator,70,100,115,35,55,75,https://play.pokemonshowdown.com/sprites/gen5/klawf.png
+Capsakid,951,GRASS,none,Chlorophyll,Insomnia,Klutz,52,62,40,62,40,50,https://play.pokemonshowdown.com/sprites/gen5/capsakid.png
+Scovillain,952,GRASS,FIRE,Chlorophyll,Insomnia,Moody,65,108,65,108,65,75,https://play.pokemonshowdown.com/sprites/gen5/scovillain.png
+Rellor,953,BUG,none,Compound Eyes,Shed Skin,none,41,50,60,31,58,30,https://play.pokemonshowdown.com/sprites/gen5/rellor.png
+Rabsca,954,BUG,PSYCHIC,Synchronize,Telepathy,none,75,50,85,115,100,45,https://play.pokemonshowdown.com/sprites/gen5/rabsca.png
+Flittle,955,PSYCHIC,none,Anticipation,Frisk,Speed Boost,30,35,30,55,30,75,https://play.pokemonshowdown.com/sprites/gen5/flittle.png
+Espathra,956,PSYCHIC,none,Opportunist,Frisk,Speed Boost,95,60,60,101,60,105,https://play.pokemonshowdown.com/sprites/gen5/espathra.png
+Tinkatink,957,FAIRY,STEEL,Mold Breaker,Own Tempo,Pickpocket,50,45,45,35,64,58,https://play.pokemonshowdown.com/sprites/gen5/tinkatink.png
+Tinkatuff,958,FAIRY,STEEL,Mold Breaker,Own Tempo,Pickpocket,65,55,55,45,82,78,https://play.pokemonshowdown.com/sprites/gen5/tinkatuff.png
+Tinkaton,959,FAIRY,STEEL,Mold Breaker,Own Tempo,Pickpocket,85,75,77,70,105,94,https://play.pokemonshowdown.com/sprites/gen5/tinkaton.png
+Wiglett,960,WATER,none,Gooey,Rattled,Sand Veil,10,55,25,35,25,95,https://play.pokemonshowdown.com/sprites/gen5/wiglett.png
+Wugtrio,961,WATER,none,Gooey,Rattled,Sand Veil,35,100,50,50,70,120,https://play.pokemonshowdown.com/sprites/gen5/wugtrio.png
+Bombirdier,962,FLYING,DARK,Big Pecks,Keen Eye,Rocky Payload,70,103,85,60,85,82,https://play.pokemonshowdown.com/sprites/gen5/bombirdier.png
+Finizen,963,WATER,none,Water Veil,none,none,70,45,40,45,40,75,https://play.pokemonshowdown.com/sprites/gen5/finizen.png
+Palafin,964,WATER,none,Zero to Hero,none,none,100,70,72,53,62,100,https://play.pokemonshowdown.com/sprites/gen5/palafin.png
+Varoom,965,STEEL,POISON,Overcoat,Slow Start,none,45,70,63,30,45,47,https://play.pokemonshowdown.com/sprites/gen5/varoom.png
+Revavroom,966,STEEL,POISON,Overcoat,Filter,none,80,119,90,54,67,90,https://play.pokemonshowdown.com/sprites/gen5/revavroom.png
+Cyclizar,967,DRAGON,NORMAL,Shed Skin,Regenerator,none,70,95,65,85,65,121,https://play.pokemonshowdown.com/sprites/gen5/cyclizar.png
+Orthworm,968,STEEL,none,Earth Eater,Sand Veil,none,70,85,145,60,55,65,https://play.pokemonshowdown.com/sprites/gen5/orthworm.png
+Glimmet,969,ROCK,POISON,Toxic Debris,Corrosion,none,48,35,42,105,60,60,https://play.pokemonshowdown.com/sprites/gen5/glimmet.png
+Glimmora,970,ROCK,POISON,Toxic Debris,Corrosion,none,83,55,90,130,81,86,https://play.pokemonshowdown.com/sprites/gen5/glimmora.png
+Greavard,971,GHOST,none,Pickup,Fluffy,none,50,61,60,30,55,34,https://play.pokemonshowdown.com/sprites/gen5/greavard.png
+Houndstone,972,GHOST,none,Sand Rush,Fluffy,none,72,101,100,50,97,68,https://play.pokemonshowdown.com/sprites/gen5/houndstone.png
+Flamigo,973,FLYING,FIGHTING,Scrappy,Tangled Feet,Costar,82,115,74,75,64,90,https://play.pokemonshowdown.com/sprites/gen5/flamigo.png
+Cetoddle,974,ICE,none,Thick Fat,Snow Cloak,Sheer Force,108,68,45,30,40,43,https://play.pokemonshowdown.com/sprites/gen5/cetoddle.png
+Cetitan,975,ICE,none,Thick Fat,Slush Rush,Sheer Force,170,113,65,45,55,73,https://play.pokemonshowdown.com/sprites/gen5/cetitan.png
+Veluza,976,WATER,PSYCHIC,Mold Breaker,Sharpness,none,90,102,73,78,65,70,https://play.pokemonshowdown.com/sprites/gen5/veluza.png
+Dondozo,977,WATER,none,Unaware,Oblivious,Water Veil,150,100,115,65,65,35,https://play.pokemonshowdown.com/sprites/gen5/dondozo.png
+Tatsugiri,978,DRAGON,WATER,Commander,Storm Drain,none,68,50,60,120,95,82,https://play.pokemonshowdown.com/sprites/gen5/tatsugiri.png
+Annihilape,979,FIGHTING,GHOST,Vital Spirit,Inner Focus,Defiant,110,115,80,50,90,90,https://play.pokemonshowdown.com/sprites/gen5/annihilape.png
+Clodsire,980,POISON,GROUND,Poison Point,Water Absorb,Unaware,130,75,60,45,100,20,https://play.pokemonshowdown.com/sprites/gen5/clodsire.png
+Farigiraf,981,NORMAL,PSYCHIC,Cud Chew,Armor Tail,Sap Sipper,120,90,70,110,70,60,https://play.pokemonshowdown.com/sprites/gen5/farigiraf.png
+Dudunsparce,982,NORMAL,none,Serene Grace,Run Away,Rattled,125,100,80,85,75,55,https://play.pokemonshowdown.com/sprites/gen5/dudunsparce.png
+Kingambit,983,DARK,STEEL,Defiant,Supreme Overlord,Pressure,100,135,120,60,85,50,https://play.pokemonshowdown.com/sprites/gen5/kingambit.png
+Great Tusk,984,GROUND,FIGHTING,Protosynthesis,none,none,115,131,131,53,53,87,https://play.pokemonshowdown.com/sprites/gen5/greattusk.png
+Scream Tail,985,FAIRY,PSYCHIC,Protosynthesis,none,none,115,65,99,65,115,111,https://play.pokemonshowdown.com/sprites/gen5/screamtail.png
+Brute Bonnet,986,GRASS,DARK,Protosynthesis,none,none,111,127,99,79,99,55,https://play.pokemonshowdown.com/sprites/gen5/brutebonnet.png
+Flutter Mane,987,GHOST,FAIRY,Protosynthesis,none,none,55,55,55,135,135,135,https://play.pokemonshowdown.com/sprites/gen5/fluttermane.png
+Slither Wing,988,BUG,FIGHTING,Protosynthesis,none,none,85,135,79,85,105,81,https://play.pokemonshowdown.com/sprites/gen5/slitherwing.png
+Sandy Shocks,989,ELECTRIC,GROUND,Protosynthesis,none,none,85,81,97,121,85,101,https://play.pokemonshowdown.com/sprites/gen5/sandyshocks.png
+Iron Treads,990,GROUND,STEEL,Quark Drive,none,none,90,112,120,72,70,106,https://play.pokemonshowdown.com/sprites/gen5/irontreads.png
+Iron Bundle,991,ICE,WATER,Quark Drive,none,none,56,80,114,124,60,136,https://play.pokemonshowdown.com/sprites/gen5/ironbundle.png
+Iron Hands,992,FIGHTING,ELECTRIC,Quark Drive,none,none,154,140,108,50,68,50,https://play.pokemonshowdown.com/sprites/gen5/ironhands.png
+Iron Jugulis,993,DARK,FLYING,Quark Drive,none,none,94,80,86,122,80,108,https://play.pokemonshowdown.com/sprites/gen5/ironjugulis.png
+Iron Moth,994,FIRE,POISON,Quark Drive,none,none,80,70,60,140,110,110,https://play.pokemonshowdown.com/sprites/gen5/ironmoth.png
+Iron Thorns,995,ROCK,ELECTRIC,Quark Drive,none,none,100,134,110,70,84,72,https://play.pokemonshowdown.com/sprites/gen5/ironthorns.png
+Frigibax,996,DRAGON,ICE,Thermal Exchange,Ice Body,none,65,75,45,35,45,55,https://play.pokemonshowdown.com/sprites/gen5/frigibax.png
+Arctibax,997,DRAGON,ICE,Thermal Exchange,Ice Body,none,90,95,66,45,65,62,https://play.pokemonshowdown.com/sprites/gen5/arctibax.png
+Baxcalibur,998,DRAGON,ICE,Thermal Exchange,Ice Body,none,115,145,92,75,86,87,https://play.pokemonshowdown.com/sprites/gen5/baxcalibur.png
+Gimmighoul,999,GHOST,none,Rattled,none,none,45,30,70,75,70,10,https://play.pokemonshowdown.com/sprites/gen5/gimmighoul.png
+Gholdengo,1000,STEEL,GHOST,Good as Gold,none,none,87,60,95,133,91,84,https://play.pokemonshowdown.com/sprites/gen5/gholdengo.png
+Wo-Chien,1001,DARK,GRASS,Tablets of Ruin,none,none,85,85,100,95,135,70,https://play.pokemonshowdown.com/sprites/gen5/wochien.png
+Chien-Pao,1002,DARK,ICE,Sword of Ruin,none,none,80,120,80,90,65,135,https://play.pokemonshowdown.com/sprites/gen5/chienpao.png
+Ting-Lu,1003,DARK,GROUND,Vessel of Ruin,none,none,155,110,125,55,80,45,https://play.pokemonshowdown.com/sprites/gen5/tinglu.png
+Chi-Yu,1004,DARK,FIRE,Beads of Ruin,none,none,55,80,80,135,120,100,https://play.pokemonshowdown.com/sprites/gen5/chiyu.png
+Roaring Moon,1005,DRAGON,DARK,Protosynthesis,none,none,105,139,71,55,101,119,https://play.pokemonshowdown.com/sprites/gen5/roaringmoon.png
+Iron Valiant,1006,FAIRY,FIGHTING,Quark Drive,none,none,74,130,90,120,60,116,https://play.pokemonshowdown.com/sprites/gen5/ironvaliant.png
+Koraidon,1007,FIGHTING,DRAGON,Orichalcum Pulse,none,none,100,135,115,85,100,135,https://play.pokemonshowdown.com/sprites/gen5/koraidon.png
+Miraidon,1008,ELECTRIC,DRAGON,Hadron Engine,none,none,100,85,100,135,115,135,https://play.pokemonshowdown.com/sprites/gen5/miraidon.png
+Walking Wake,1009,WATER,DRAGON,Protosynthesis,none,none,99,83,91,125,83,109,https://play.pokemonshowdown.com/sprites/gen5/walkingwake.png
+Iron Leaves,1010,GRASS,PSYCHIC,Quark Drive,none,none,90,130,88,70,108,104,https://play.pokemonshowdown.com/sprites/gen5/ironleaves.png
