@@ -21,14 +21,41 @@ for name in pokemon_names[0:1068]:
   pokemon = name
 
   
-  moves = browser.find_elements_by_class_name('resultheader')
-  print(moves[0].text)
-  print(moves[1].text)
+  moves = browser.find_elements_by_css_selector("ul.utilichart.nokbd > li")
+  source_temp = ""
+  for move_tmp in moves:
+    if "Accuracy" not in move_tmp.text:
+      if "Level" in move_tmp.text:
+        source_temp = "level "
+      if "TM" in move_tmp.text:
+        source_temp = "TM"
+      if "Tutor" in move_tmp.text:
+        source_temp = "move tutor"
+      if "Egg" in move_tmp.text:
+        source_temp = "egg move"
+      if "Past" in move_tmp.text:
+        source_temp = "Past generation only"
+      if "Event" in move_tmp.text:
+        source_temp = "Event"
+
+    else:
+
+      move = (move_tmp.text).split("\n", 2)[1]
+      if move == "Power" or move == "Accuracy":
+        move = (move_tmp.text).split("\n", 2)[0]
 
 
-  
+      if source_temp == "level ":
+        source_tmp = (move_tmp.text).split("\n", 2)[0]
+        if "L" in source_tmp:
+          source = source_temp + source_tmp.removeprefix("L")
+        elif source_tmp == "–":
+          source = source_temp + "1"
+      else:
+        source = source_temp
+      
+      file.write(pokemon + "," + move + "," + source + "\n")
 
-  #file.write(pokemon + "," + move + "," + source + "\n")
 
 browser.close()
 file.close()
