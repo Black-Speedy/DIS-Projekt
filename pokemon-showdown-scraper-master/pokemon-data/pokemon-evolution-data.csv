@@ -1,0 +1,509 @@
+Pokemon, Pre-evolution, Method 
+Ivysaur,Bulbasaur,level 16
+Venusaur,Ivysaur,level 32
+Charmeleon,Charmander,level 16
+Charizard,Charmeleon,level 36
+Wartortle,Squirtle,level 16
+Blastoise,Wartortle,level 36
+Metapod,Caterpie,level 7
+Butterfree,Metapod,level 10
+Kakuna,Weedle,level 7
+Beedrill,Kakuna,level 10
+Pidgeotto,Pidgey,level 18
+Pidgeot,Pidgeotto,level 36
+Raticate,Rattata,level 20
+Raticate-Alola,Rattata-Alola,level 20
+Fearow,Spearow,level 20
+Arbok,Ekans,level 22
+Pikachu,Pichu,level-up with high Friendship
+Raichu,Pikachu,Thunder Stone
+Raichu-Alola,Pikachu,Thunder Stone
+Sandslash,Sandshrew,level 22
+Sandslash-Alola,Sandshrew-Alola,Ice Stone
+Nidorina,Nidoran-F,level 16
+Nidoqueen,Nidorina,Moon Stone
+Nidorino,Nidoran-M,level 16
+Nidoking,Nidorino,Moon Stone
+Clefairy,Cleffa,level-up with high Friendship
+Clefable,Clefairy,Moon Stone
+Ninetales,Vulpix,Fire Stone
+Ninetales-Alola,Vulpix-Alola,Ice Stone
+Jigglypuff,Igglybuff,level-up with high Friendship
+Wigglytuff,Jigglypuff,Moon Stone
+Golbat,Zubat,level 22
+Gloom,Oddish,level 21
+Vileplume,Gloom,Leaf Stone
+Parasect,Paras,level 24
+Venomoth,Venonat,level 31
+Dugtrio,Diglett,level 26
+Dugtrio-Alola,Diglett-Alola,level 26
+Persian,Meowth,level 28
+Persian-Alola,Meowth-Alola,level-up with high Friendship
+Golduck,Psyduck,level 33
+Primeape,Mankey,level 28
+Arcanine,Growlithe,Fire Stone
+Arcanine-Hisui,Growlithe-Hisui,Fire Stone
+Poliwhirl,Poliwag,level 25
+Poliwrath,Poliwhirl,Water Stone
+Kadabra,Abra,level 16
+Alakazam,Kadabra,trade
+Machoke,Machop,level 28
+Machamp,Machoke,trade
+Weepinbell,Bellsprout,level 21
+Victreebel,Weepinbell,Leaf Stone
+Tentacruel,Tentacool,level 30
+Graveler,Geodude,level 25
+Graveler-Alola,Geodude-Alola,level 25
+Golem,Graveler,trade
+Golem-Alola,Graveler-Alola,trade
+Rapidash,Ponyta,level 40
+Rapidash-Galar,Ponyta-Galar,level 40
+Slowbro,Slowpoke,level 37
+Slowbro-Galar,Slowpoke-Galar,Galarica Cuff
+Magneton,Magnemite,level 30
+Dodrio,Doduo,level 31
+Dewgong,Seel,level 34
+Muk,Grimer,level 38
+Muk-Alola,Grimer-Alola,level 38
+Cloyster,Shellder,Water Stone
+Haunter,Gastly,level 25
+Gengar,Haunter,trade
+Hypno,Drowzee,level 26
+Kingler,Krabby,level 28
+Electrode,Voltorb,level 30
+Electrode-Hisui,Voltorb-Hisui,Leaf Stone
+Exeggutor,Exeggcute,Leaf Stone
+Exeggutor-Alola,Exeggcute,Leaf Stone
+Marowak,Cubone,level 28
+Marowak-Alone,Cubone,level 28
+Hitmonlee,Tyrogue,level 20
+Hitmonchan,Tyrogue,level 20
+Weezing,Koffing,level 35
+Weezing-Galar,Koffing,level 35
+Rhydon,Rhyhorn,level 42
+Chansey,Happiny,level-up holding Oval Stone during the day
+Seadra,Horsea,level 32
+Seaking,Goldeen,level 33
+Starmie,Staryu,Water Stone
+Mr. Mime,Mime,Jr. (level-up with Mimic
+Mr. Mime-Galar,Mime,Jr. (level-up with Mimic
+Jynx,Smoochum,level 30
+Electabuzz,Elekid,level 30
+Magmar,Magby,level 30
+Gyarados,Magikarp,level 20
+Vaporeon,Eevee,Water Stone
+Jolteon,Eevee,Thunder Stone
+Flareon,Eevee,Fire Stone
+Omastar,Omanyte,level 40
+Kabutops,Kabuto,level 40
+Snorlax,Munchlax,level-up with high Friendship
+Dragonair,Dratini,level 30
+Dragonite,Dragonair,level 55
+Bayleef,Chikorita,level 16
+Meganium,Bayleef,level 32
+Quilava,Cyndaquil,level 14
+Typhlosion,Quilava,level 36
+Typhlosion-Hisui,Quilava,level 36
+Croconaw,Totodile,level 18
+Feraligatr,Croconaw,level 30
+Furret,Sentret,level 15
+Noctowl,Hoothoot,level 20
+Ledian,Ledyba,level 18
+Ariados,Spinarak,level 22
+Crobat,Golbat,level-up with high Friendship
+Lanturn,Chinchou,level 27
+Togetic,Togepi,level-up with high Friendship
+Xatu,Natu,level 25
+Flaaffy,Mareep,level 15
+Ampharos,Flaaffy,level 30
+Bellossom,Gloom,Sun Stone
+Marill,Azurill,level-up with high Friendship
+Azumarill,Marill,level 18
+Sudowoodo,Bonsly,level-up with Mimic
+Politoed,Poliwhirl,trade
+Skiploom,Hoppip,level 18
+Jumpluff,Skiploom,level 27
+Sunflora,Sunkern,Sun Stone
+Quagsire,Wooper,level 20
+Espeon,Eevee,level-up with high Friendship during the day
+Umbreon,Eevee,level-up with high Friendship at night
+Slowking,Slowpoke,trade
+Slowking-Galar,Slowpoke-Galar,Galarica Wreath
+Wobbuffet,Wynaut,level 15
+Forretress,Pineco,level 31
+Steelix,Onix,trade
+Granbull,Snubbull,level 23
+Scizor,Scyther,trade
+Ursaring,Teddiursa,level 30
+Magcargo,Slugma,level 38
+Piloswine,Swinub,level 33
+Octillery,Remoraid,level 25
+Mantine,Mantyke,level-up with a Remoraid in party
+Houndoom,Houndour,level 24
+Kingdra,Seadra,trade
+Donphan,Phanpy,level 25
+Porygon2,Porygon,trade
+Hitmontop,Tyrogue,level 20
+Blissey,Chansey,level-up with high Friendship
+Pupitar,Larvitar,level 30
+Tyranitar,Pupitar,level 55
+Grovyle,Treecko,level 16
+Sceptile,Grovyle,level 36
+Combusken,Torchic,level 16
+Blaziken,Combusken,level 36
+Marshtomp,Mudkip,level 16
+Swampert,Marshtomp,level 36
+Mightyena,Poochyena,level 18
+Linoone,Zigzagoon,level 20
+Linoone-Galar,Zigzagoon-Galar,level 20
+Silcoon,Wurmple,level 7
+Beautifly,Silcoon,level 10
+Cascoon,Wurmple,level 7
+Dustox,Cascoon,level 10
+Lombre,Lotad,level 14
+Ludicolo,Lombre,Water Stone
+Nuzleaf,Seedot,level 14
+Shiftry,Nuzleaf,Leaf Stone
+Swellow,Taillow,level 22
+Pelipper,Wingull,level 25
+Kirlia,Ralts,level 20
+Gardevoir,Kirlia,level 30
+Masquerain,Surskit,level 22
+Breloom,Shroomish,level 23
+Vigoroth,Slakoth,level 18
+Slaking,Vigoroth,level 36
+Ninjask,Nincada,level 20
+Shedinja,Nincada,level 20
+Loudred,Whismur,level 20
+Exploud,Loudred,level 40
+Hariyama,Makuhita,level 24
+Delcatty,Skitty,Moon Stone
+Lairon,Aron,level 32
+Aggron,Lairon,level 42
+Medicham,Meditite,level 37
+Manectric,Electrike,level 26
+Roselia,Budew,level-up with high Friendship during the day
+Swalot,Gulpin,level 26
+Sharpedo,Carvanha,level 30
+Wailord,Wailmer,level 40
+Camerupt,Numel,level 33
+Grumpig,Spoink,level 32
+Vibrava,Trapinch,level 35
+Flygon,Vibrava,level 45
+Cacturne,Cacnea,level 32
+Altaria,Swablu,level 35
+Whiscash,Barboach,level 30
+Crawdaunt,Corphish,level 30
+Claydol,Baltoy,level 36
+Cradily,Lileep,level 40
+Armaldo,Anorith,level 40
+Milotic,Feebas,trade
+Banette,Shuppet,level 37
+Dusclops,Duskull,level 37
+Chimecho,Chingling,level-up with high Friendship at night
+Glalie,Snorunt,level 42
+Sealeo,Spheal,level 32
+Walrein,Sealeo,level 44
+Huntail,Clamperl,trade
+Gorebyss,Clamperl,trade
+Shelgon,Bagon,level 30
+Salamence,Shelgon,level 50
+Metang,Beldum,level 20
+Metagross,Metang,level 45
+Grotle,Turtwig,level 18
+Torterra,Grotle,level 32
+Monferno,Chimchar,level 14
+Infernape,Monferno,level 36
+Prinplup,Piplup,level 16
+Empoleon,Prinplup,level 36
+Staravia,Starly,level 14
+Staraptor,Staravia,level 34
+Bibarel,Bidoof,level 15
+Kricketune,Kricketot,level 10
+Luxio,Shinx,level 15
+Luxray,Luxio,level 30
+Roserade,Roselia,Shiny Stone
+Rampardos,Cranidos,level 30
+Bastiodon,Shieldon,level 30
+Wormadam,Burmy,level 20
+Mothim,Burmy,level 20
+Vespiquen,Combee,level 21
+Floatzel,Buizel,level 26
+Cherrim,Cherubi,level 25
+Gastrodon,Shellos,level 30
+Ambipom,Aipom,level-up with Double Hit
+Drifblim,Drifloon,level 28
+Lopunny,Buneary,level-up with high Friendship
+Mismagius,Misdreavus,Dusk Stone
+Honchkrow,Murkrow,Dusk Stone
+Purugly,Glameow,level 38
+Skuntank,Stunky,level 34
+Bronzong,Bronzor,level 33
+Gabite,Gible,level 24
+Garchomp,Gabite,level 48
+Lucario,Riolu,level-up with high Friendship during the day
+Hippowdon,Hippopotas,level 34
+Drapion,Skorupi,level 40
+Toxicroak,Croagunk,level 37
+Lumineon,Finneon,level 31
+Abomasnow,Snover,level 40
+Weavile,Sneasel,level-up holding Razor Claw at night
+Magnezone,Magneton,Thunder Stone
+Lickilicky,Lickitung,level-up with Rollout
+Rhyperior,Rhydon,trade
+Tangrowth,Tangela,level-up with Ancient Power
+Electivire,Electabuzz,trade
+Magmortar,Magmar,trade
+Togekiss,Togetic,Shiny Stone
+Yanmega,Yanma,level-up with Ancient Power
+Leafeon,Eevee,Leaf Stone
+Glaceon,Eevee,Ice Stone
+Gliscor,Gligar,level-up holding Razor Fang at night
+Mamoswine,Piloswine,level-up with Ancient Power
+Porygon-Z,Porygon2,trade
+Gallade,Kirlia,Dawn Stone
+Probopass,Nosepass,level-up near a special magnetic field
+Dusknoir,Dusclops,trade
+Froslass,Snorunt,Dawn Stone
+Servine,Snivy,level 17
+Serperior,Servine,level 36
+Pignite,Tepig,level 17
+Emboar,Pignite,level 36
+Dewott,Oshawott,level 17
+Samurott,Dewott,level 36
+Samurott-Hisui,Dewott,level 36
+Watchog,Patrat,level 20
+Herdier,Lillipup,level 16
+Stoutland,Herdier,level 32
+Liepard,Purrloin,level 20
+Simisage,Pansage,Leaf Stone
+Simisear,Pansear,Fire Stone
+Simipour,Panpour,Water Stone
+Musharna,Munna,Moon Stone
+Tranquill,Pidove,level 21
+Unfezant,Tranquill,level 32
+Zebstrika,Blitzle,level 27
+Boldore,Roggenrola,level 25
+Gigalith,Boldore,trade
+Swoobat,Woobat,level-up with high Friendship
+Excadrill,Drilbur,level 31
+Gurdurr,Timburr,level 25
+Conkeldurr,Gurdurr,trade
+Palpitoad,Tympole,level 25
+Seismitoad,Palpitoad,level 36
+Swadloon,Sewaddle,level 20
+Leavanny,Swadloon,level-up with high Friendship
+Whirlipede,Venipede,level 22
+Scolipede,Whirlipede,level 30
+Whimsicott,Cottonee,Sun Stone
+Lilligant,Petilil,Sun Stone
+Lilligant-Hisui,Petilil,Sun Stone
+Krokorok,Sandile,level 29
+Krookodile,Krokorok,level 40
+Darmanitan,Darumaka,level 35
+Darmanitan-Galar,Darumaka-Galar,Ice Stone
+Crustle,Dwebble,level 34
+Scrafty,Scraggy,level 39
+Cofagrigus,Yamask,level 34
+Carracosta,Tirtouga,level 37
+Archeops,Archen,level 37
+Garbodor,Trubbish,level 36
+Zoroark,Zorua,level 30
+Zoroark-Hisui,Zorua-Hisui,level 30
+Cinccino,Minccino,Shiny Stone
+Gothorita,Gothita,level 32
+Gothitelle,Gothorita,level 41
+Duosion,Solosis,level 32
+Reuniclus,Duosion,level 41
+Swanna,Ducklett,level 35
+Vanillish,Vanillite,level 35
+Vanilluxe,Vanillish,level 47
+Sawsbuck,Deerling,level 34
+Escavalier,Karrablast,trade
+Amoonguss,Foongus,level 39
+Jellicent,Frillish,level 40
+Galvantula,Joltik,level 36
+Ferrothorn,Ferroseed,level 40
+Klang,Klink,level 38
+Klinklang,Klang,level 49
+Eelektrik,Tynamo,level 39
+Eelektross,Eelektrik,Thunder Stone
+Beheeyem,Elgyem,level 42
+Lampent,Litwick,level 41
+Chandelure,Lampent,Dusk Stone
+Fraxure,Axew,level 38
+Haxorus,Fraxure,level 48
+Beartic,Cubchoo,level 37
+Accelgor,Shelmet,trade
+Mienshao,Mienfoo,level 50
+Golurk,Golett,level 43
+Bisharp,Pawniard,level 52
+Braviary,Rufflet,level 54
+Braviary-Hisui,Rufflet,level 54
+Mandibuzz,Vullaby,level 54
+Zweilous,Deino,level 50
+Hydreigon,Zweilous,level 64
+Volcarona,Larvesta,level 59
+Quilladin,Chespin,level 16
+Chesnaught,Quilladin,level 36
+Braixen,Fennekin,level 16
+Delphox,Braixen,level 36
+Frogadier,Froakie,level 16
+Greninja,Frogadier,level 36
+Diggersby,Bunnelby,level 20
+Fletchinder,Fletchling,level 17
+Talonflame,Fletchinder,level 35
+Spewpa,Scatterbug,level 9
+Vivillon,Spewpa,level 12
+Pyroar,Litleo,level 35
+Floette,Flabebe,level 19
+Florges,Floette,Shiny Stone
+Gogoat,Skiddo,level 32
+Pangoro,Pancham,level 32
+Meowstic,Espurr,level 25
+Doublade,Honedge,level 35
+Aegislash,Doublade,Dusk Stone
+Aromatisse,Spritzee,trade
+Slurpuff,Swirlix,trade
+Malamar,Inkay,level 30
+Barbaracle,Binacle,level 39
+Dragalge,Skrelp,level 48
+Clawitzer,Clauncher,level 37
+Heliolisk,Helioptile,Sun Stone
+Tyrantrum,Tyrunt,level 39
+Aurorus,Amaura,level 39
+Sylveon,Eevee,level-up with a Fairy-type move and two levels of Affection
+Sliggoo,Goomy,level 40
+Sliggoo-Hisui,Goomy,level 40
+Goodra,Sliggoo,level 50
+Goodra-Hisui,Sliggoo-Hisui,level 50
+Trevenant,Phantump,trade
+Gourgeist,Pumpkaboo,trade
+Avalugg,Bergmite,level 37
+Avalugg-Hisui,Bergmite,level 37
+Noivern,Noibat,level 48
+Dartrix,Rowlet,level 17
+Decidueye,Dartrix,level 34
+Decidueye-Hisui,Dartrix,level 36
+Torracat,Litten,level 17
+Incineroar,Torracat,level 34
+Brionne,Popplio,level 17
+Primarina,Brionne,level 34
+Trumbeak,Pikipek,level 14
+Toucannon,Trumbeak,level 28
+Gumshoos,Yungoos,level 20
+Charjabug,Grubbin,level 20
+Vikavolt,Charjabug,Thunder Stone
+Crabominable,Crabrawler,Ice Stone
+Ribombee,Cutiefly,level 25
+Lycanroc,Rockruff,level 25
+Toxapex,Mareanie,level 38
+Mudsdale,Mudbray,level 30
+Araquanid,Dewpider,level 22
+Lurantis,Fomantis,level 34
+Shiinotic,Morelull,level 24
+Salazzle,Salandit,level 33
+Bewear,Stufful,level 27
+Steenee,Bounsweet,level 18
+Tsareena,Steenee,level-up with Stomp
+Golisopod,Wimpod,level 30
+Palossand,Sandygast,level 42
+Silvally,Type:,Null (level-up with high Friendship
+Hakamo-o,Jangmo-o,level 35
+Kommo-o,Hakamo-o,level 45
+Cosmoem,Cosmog,level 43
+Solgaleo,Cosmoem,level 53
+Lunala,Cosmoem,level 53
+Naganadel,Poipole,level-up with Dragon Pulse
+Thwackey,Grookey,level 16
+Rillaboom,Thwackey,level 35
+Raboot,Scorbunny,level 16
+Cinderace,Raboot,level 35
+Drizzile,Sobble,level 16
+Inteleon,Drizzile,level 35
+Greedent,Skwovet,level 24
+Corvisquire,Rookidee,level 18
+Corviknight,Corvisquire,level 38
+Dottler,Blipbug,level 10
+Orbeetle,Dottler,level 30
+Thievul,Nickit,level 18
+Eldegoss,Gossifleur,level 20
+Dubwool,Wooloo,level 24
+Drednaw,Chewtle,level 22
+Boltund,Yamper,level 25
+Carkol,Rolycoly,level 18
+Coalossal,Carkol,level 34
+Flapple,Applin,Tart Apple
+Appletun,Applin,Sweet Apple
+Sandaconda,Silicobra,level 36
+Barraskewda,Arrokuda,level 26
+Toxtricity,Toxel,level 30
+Centiskorch,Sizzlipede,level 28
+Grapploct,Clobbopus,level-up with Taunt
+Polteageist,Sinistea,Cracked Pot
+Hattrem,Hatenna,level 32
+Hatterene,Hattrem,level 42
+Morgrem,Impidimp,level 32
+Grimmsnarl,Morgrem,level 42
+Obstagoon,Linoone-Galar,level 35
+Perrserker,Meowth-Galar,level 28
+Cursola,Corsola-Galar,level 38
+Sirfetch'd,Farfetch’d-Galar,Land 3 critical hits in 1 battle
+Mr. Rime,Mr.,Mime-Galar (level 42
+Runerigus,Yamask-Galar,Have 49+ HP lost and walk under stone sculpture in Dusty Bowl
+Alcremie,Milcery,spin while holding a Sweet
+Frosmoth,Snom,level-up with high Friendship at night
+Copperajah,Cufant,level 34
+Drakloak,Dreepy,level 50
+Dragapult,Drakloak,level 60
+Urshifu,Kubfu,Defeat the Single Strike Tower
+Wyrdeer,Stantler,Use Agile style Psyshield Bash 20 times
+Kleavor,Scyther,Black Augurite
+Ursaluna,Ursaring,Peat Block when there's a full moon
+Basculegion,Basculin-White-Striped,Receive 294+ recoil without fainting
+Sneasler,Sneasel-Hisui,level-up holding Razor Claw during the day
+Overqwil,Qwilfish-Hisui,Use Strong style Barb Barrage 20 times
+Floragato,Sprigatito,level 16
+Meowscarada,Floragato,level 36
+Crocalor,Fuecoco,level 16
+Skeledirge,Crocalor,level 36
+Quaxwell,Quaxly,level 16
+Quaquaval,Quaxwell,level 36
+Oinkologne,Lechonk,level 18
+Spidops,Tarountula,level 15
+Lokix,Nymble,level 24
+Pawmo,Pawmi,level 18
+Pawmot,Pawmo,walk 1000 steps in Let's Go
+Maushold,Tandemaus,level 25
+Dachsbun,Fidough,level 26
+Dolliv,Smoliv,level 25
+Arboliva,Dolliv,level 35
+Naclstack,Nacli,level 24
+Garganacl,Naclstack,level 38
+Armarouge,Charcadet,Auspicious Armor
+Ceruledge,Charcadet,Malicious Armor
+Bellibolt,Tadbulb,Thunder Stone
+Kilowattrel,Wattrel,level 25
+Mabosstiff,Maschiff,level 30
+Grafaiai,Shroodle,level 28
+Brambleghast,Bramblin,Walk 1000 steps in Let's Go
+Toedscruel,Toedscool,level 30
+Scovillain,Capsakid,Fire Stone
+Rabsca,Rellor,walk 1000 steps in Let's Go
+Espathra,Flittle,level 35
+Tinkatuff,Tinkatink,level 24
+Tinkaton,Tinkatuff,level 38
+Wugtrio,Wiglett,level 26
+Palafin,Finizen,level 38
+Revavroom,Varoom,level 40
+Glimmora,Glimmet,level 35
+Houndstone,Greavard,level 30
+Cetitan,Cetoddle,Ice Stone
+Annihilape,Primeape,Use Rage Fist 20 times and level-up
+Clodsire,Wooper-Paldea,level 20
+Farigiraf,Girafarig,level-up with Twin Beam
+Dudunsparce,Dunsparce,level-up with Hyper Drill
+Kingambit,Bisharp,Defeat 3 Bisharp leading Pawniard and level-up
+Arctibax,Frigibax,level 35
+Baxcalibur,Arctibax,level 54
+Gholdengo,Gimmighoul,Level up with 999 Coins in the bag
