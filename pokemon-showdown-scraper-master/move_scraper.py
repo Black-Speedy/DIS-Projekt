@@ -13,7 +13,7 @@ file.write("Move, type, Category, Power, Accuracy, Power Points \n")
 with open('./move_names.json') as f:
   move_names = json.loads(f.read())
 
-for name in move_names[0:900]:
+for name in move_names[0:837]:
   search_input.clear()
   search_input.send_keys(name)
   search_input.send_keys(Keys.RETURN)
@@ -27,11 +27,15 @@ for name in move_names[0:900]:
   power_tmp = browser.find_elements_by_class_name("powerentry")
   if len(power_tmp) == 1:
     power = (power_tmp[0].text).strip("Base power:\n")
+    if power == "—":
+      power = "none"
   else:
     power = "none"
   
   accuracy_tmp = browser.find_elements_by_class_name("accuracyentry")
   accuracy = ((accuracy_tmp[0].text).strip("Accuracy:\n")).removesuffix("%")
+  if accuracy == "—":
+    accuracy = "none"
 
   PP_tmp = browser.find_elements_by_class_name("ppentry")
   PP = (((PP_tmp[0].text).strip("PP:\n"))[0:2]).removesuffix("\n")

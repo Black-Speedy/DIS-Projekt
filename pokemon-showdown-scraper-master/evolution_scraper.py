@@ -8,7 +8,7 @@ browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get("https://dex.pokemonshowdown.com/pokemon/")
 search_input = browser.find_element_by_class_name("searchbox")
 
-file = open("./pokemon-data/pokemon-all-data.csv", 'w')
+file = open("./pokemon-data/pokemon-evolution-data.csv", 'w')
 file.write("Pokemon, Pre-evolution, Method \n")
 
 with open('./names.json') as f:
