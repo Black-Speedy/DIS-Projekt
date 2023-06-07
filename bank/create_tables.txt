@@ -1,0 +1,49 @@
+DROP TABLE pokemon;
+
+CREATE TABLE pokemon
+(Pokemon varchar,
+Number int,
+height float,
+weight float,
+HP int,
+Attack int,
+Defence int,
+SpAtk int,
+SpDef int,
+Speed int,
+total int,
+Sprite varchar
+);
+
+COPY pokemon
+FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\pokemon-all-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE moves;
+
+CREATE TABLE moves
+(Move varchar,
+type varchar,
+Category varchar,
+Power int,
+Accuracy int,
+PowerPoints int
+);
+
+COPY moves
+FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\move-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+CREATE TABLE typeRelations
+(DefType varchar,
+AtkType varchar,
+Relation varchar
+);
+
+COPY typeRelations
+FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\type-relation-data.csv'
+DELIMITER ','
+CSV HEADER;
+
