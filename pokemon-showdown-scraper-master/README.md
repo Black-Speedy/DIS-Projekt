@@ -23,13 +23,16 @@ You can dictate which generation of pokemon data you are scraping by altering th
 for name in pokemon_names[721:807]:
 ```
 ```python
-Generation 1: [0:151]
-Generation 2: [151:251]
-Generation 3: [251:386]
-Generation 4: [386:493]
-Generation 5: [493:649]
-Generation 6: [649:721]
-Generation 7: [721:807]
+Generation All  : [0:1068]
+Generation 1    : [0:187]
+Generation 2    : [187:293]
+Generation 3    : [293:430]
+Generation 4    : [430:537]
+Generation 5    : [537:703]
+Generation 6    : [703:778]
+Generation 7    : [778:867]
+Generation 8    : [867:963]
+Generation 9    : [963:1068]
 ```
 If you decide to separate the data by Pokemon Generation, be sure to change the path that the file is opening on line 9 accordingly. For instance, if you are scraping for Generation 4:
 
