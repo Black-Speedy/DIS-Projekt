@@ -112,14 +112,3 @@ FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-type
 DELIMITER ','
 CSV HEADER;
 
-DROP TABLE pokemonTypes;
-
-CREATE TABLE pokemonTypes
-(Pokemon varchar,
-Type varchar
-);
-
-COPY pokemonTypes
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-type-data.csv'
-DELIMITER ','
-CSV HEADER;
