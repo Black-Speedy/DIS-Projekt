@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ the_title }}</h1>
+
+<ul>
+  <li><a href="{{ url_for('index') }}">Home page</a></li>
+</ul>
+
+<p>Quiestion 1 of 10</p>
+
+
+<body>
+  <!-- There should be 4 buttoms for possible answers -->
+
+  <button onclick="window.location.href='{{ url_for('quiz') }}'">Answer 1</button>
+  <button onclick="window.location.href='{{ url_for('quiz') }}'">Answer 2</button>
+  <button onclick="window.location.href='{{ url_for('quiz') }}'">Answer 3</button>
+  <button onclick="window.location.href='{{ url_for('quiz') }}'">Answer 4</button>
+
+
+</body>
+
+<form method="POST" action="/results.html">
+  {% for question in questions %}
+  <h3>{{ question.question_text }}</h3>
+  {% for option in question.options %}
+  <input type="radio" name="answer{{ question.id }}" value="{{ option }}">
+  <label>{{ option }}</label><br>
+  {% endfor %}
+  <br>
+  {% endfor %}
+  <input type="submit" value="Submit">
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ the_title }}</h1>
+
+<ul>
+    <li><a href="{{ url_for('index') }}">Home page</a></li>
+</ul>
+
+<p>Here are your results:</p>
+
+
+<body>
+    <!-- There should be 4 buttoms for possible answers -->
+
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back to homepage</button>
+
+
+</body>
+
+
+
+{% endblock %}
