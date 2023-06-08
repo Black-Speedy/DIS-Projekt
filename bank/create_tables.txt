@@ -16,7 +16,7 @@ Sprite varchar
 );
 
 COPY pokemon
-FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\pokemon-all-data.csv'
+FROM 'C:/Users/matin/Documents/Github/DIS-Projekt/bank/pokemon-all-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -32,9 +32,11 @@ PowerPoints int
 );
 
 COPY moves
-FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\move-data.csv'
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\move-data.csv'
 DELIMITER ','
 CSV HEADER;
+
+DROP TABLE typeRelations;
 
 CREATE TABLE typeRelations
 (DefType varchar,
@@ -43,7 +45,83 @@ Relation varchar
 );
 
 COPY typeRelations
-FROM 'C:\Users\boask\Desktop\UIS_Prototype-master\bank\type-relation-data.csv'
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\type-relation-data.csv'
 DELIMITER ','
 CSV HEADER;
 
+DROP TABLE pokemonAbilities;
+
+CREATE TABLE pokemonAbilities
+(Pokemon varchar,
+Ability varchar,
+Hidden varchar
+);
+
+COPY pokemonAbilities
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-ability-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE eggData;
+
+CREATE TABLE eggData
+(Pokemon varchar,
+Egg-Group varchar
+);
+
+COPY eggData
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-egg-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE evolutionData;
+
+CREATE TABLE evolutionData
+(Pokemon varchar,
+Pre-Evolution varchar,
+Method varchar
+);
+
+COPY evolutionData
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-evolution-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE pokemonMove;
+
+CREATE TABLE pokemonMove
+(Pokemon varchar,
+Move varchar,
+Source varchar
+);
+
+COPY pokemonMove
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-move-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE pokemonTypes;
+
+CREATE TABLE pokemonTypes
+(Pokemon varchar,
+Move varchar,
+Source varchar
+);
+
+COPY pokemonTypes
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-type-data.csv'
+DELIMITER ','
+CSV HEADER;
+
+DROP TABLE pokemonTypes;
+
+CREATE TABLE pokemonTypes
+(Pokemon varchar,
+Move varchar,
+Source varchar
+);
+
+COPY pokemonTypes
+FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\bank\pokemon-type-data.csv'
+DELIMITER ','
+CSV HEADER;
