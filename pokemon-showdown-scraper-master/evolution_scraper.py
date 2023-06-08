@@ -27,7 +27,7 @@ for name in pokemon_names[0:1068]:
   for elm in evo:
     if "Evolves" in elm.text:
       pre_met = (elm.text).removeprefix("Evolves from ")
-      prevolution = (pre_met.split(" ", 1)[0]).replace("é", "e").replace("’", "'")
+      prevolution = (pre_met.split(" (", 1)[0]).replace("é", "e").replace("’", "'")
       method = (pre_met.split(" (", 1)[1]).removesuffix(")")
 
       file.write(pokemon + "," + prevolution + "," + method + "\n")
