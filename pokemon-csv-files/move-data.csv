@@ -656,14 +656,6 @@ Clanging Scales,DRAGON,SPECIAL,110,100,5
 Dragon Hammer,DRAGON,PHYSICAL,90,100,15
 Brutal Swing,DARK,PHYSICAL,60,100,20
 Aurora Veil,ICE,STATUS,none,none,20
-Sinister Arrow Raid,GHOST,PHYSICAL,180,none,1
-Malicious Moonsault,DARK,PHYSICAL,180,none,1
-Oceanic Operetta,WATER,SPECIAL,195,none,1
-Guardian of Alola,FAIRY,SPECIAL,none,none,1
-Stoked Sparksurfer,ELECTRIC,SPECIAL,175,none,1
-Pulverizing Pancake,NORMAL,PHYSICAL,210,none,1
-Extreme Evoboost,NORMAL,STATUS,none,none,1
-Genesis Supernova,PSYCHIC,SPECIAL,185,none,1
 Shell Trap,FIRE,SPECIAL,150,100,5
 Fleur Cannon,FAIRY,SPECIAL,130,90,5
 Psychic Fangs,PSYCHIC,PHYSICAL,85,100,10
@@ -682,11 +674,6 @@ Multi-Attack,NORMAL,PHYSICAL,120,100,10
 Mind Blown,FIRE,SPECIAL,150,100,5
 Plasma Fists,ELECTRIC,PHYSICAL,100,100,15
 Photon Geyser,PSYCHIC,SPECIAL,100,100,5
-Searing Sunraze Smash,STEEL,PHYSICAL,200,none,1
-Menacing Moonraze Maelstrom,GHOST,SPECIAL,200,none,1
-Let's Snuggle Forever,FAIRY,PHYSICAL,190,none,1
-Splintered Stormshards,ROCK,PHYSICAL,190,none,1
-Clangorous Soulblaze,DRAGON,SPECIAL,185,none,1
 Zippy Zap,ELECTRIC,PHYSICAL,80,100,10
 Splishy Splash,WATER,SPECIAL,90,100,15
 Floaty Fall,FLYING,PHYSICAL,90,95,15
