@@ -26,8 +26,8 @@ CREATE TABLE moves
 (Move varchar,
 type varchar,
 Category varchar,
-Power int,
-Accuracy int,
+Power varchar,
+Accuracy varchar,
 PowerPoints int
 );
 
@@ -66,7 +66,7 @@ DROP TABLE eggData;
 
 CREATE TABLE eggData
 (Pokemon varchar,
-Egg-Group varchar
+Egg_Group varchar
 );
 
 COPY eggData
@@ -78,7 +78,7 @@ DROP TABLE evolutionData;
 
 CREATE TABLE evolutionData
 (Pokemon varchar,
-Pre-Evolution varchar,
+Pre_Evolution varchar,
 Method varchar
 );
 
@@ -104,8 +104,7 @@ DROP TABLE pokemonTypes;
 
 CREATE TABLE pokemonTypes
 (Pokemon varchar,
-Move varchar,
-Source varchar
+Type varchar
 );
 
 COPY pokemonTypes
@@ -117,8 +116,7 @@ DROP TABLE pokemonTypes;
 
 CREATE TABLE pokemonTypes
 (Pokemon varchar,
-Move varchar,
-Source varchar
+Type varchar
 );
 
 COPY pokemonTypes
