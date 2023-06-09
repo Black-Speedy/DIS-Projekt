@@ -10,15 +10,6 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      border: 3px solid; 
-    }
-  </style>
-  <style>
     .choice_button {
       border: none;
       border-radius: 8px;
@@ -26,6 +17,21 @@
       text-align: center;
       text-decoration: none;
       cursor: pointer;
+    }
+    .image-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f6ecec;
+      color: #000000;
+      padding: 10px 15px;
+      border-color: #130202;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .image-button img {
+      height: 80px;
+      margin-right: 40px;
     }
   </style>
 </head>
@@ -36,11 +42,11 @@
 <div class="w3-top">
   <div class="w3-bar w3-red w3-left-align">
    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars "></i></a>
-   <a href="#" class="w3-bar-item w3-button w3-hover-white">Pokemon Quiz</a>
+   <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-hover-white">Home</a>
      <div class="w3-dropdown-hover w3-hide-small">
      <button class="w3-button w3-hover-white" title="Notifications">Quizzes <i class="fa fa-caret-down"></i></button>     
      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-       <a href="#" class="w3-bar-item w3-button w3-hover-red">Damage Multiplier</a>
+       <a onclick="window.location.href='{{ url_for('quiz') }}'" class="w3-bar-item w3-button w3-hover-red">Damage Multiplier</a>
        <a href="#" class="w3-bar-item w3-button w3-hover-red">Evolution method</a>
        <a href="#" class="w3-bar-item w3-button w3-hover-red">breeding for moves</a>
      </div>

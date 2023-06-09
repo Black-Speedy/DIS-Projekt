@@ -14,7 +14,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="postgres",
     user="postgres",
-    password="0301"
+    password=""
 )
 
 cursor = conn.cursor(cursor_factory=DictCursor)
@@ -41,9 +41,9 @@ def results():
     score = calculate_score(answers, correctAnswers)
     return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
 
-@app.route('/quizs.html')
+@app.route('/quiz.html')
 def quiz():
-    (sprite1, sprite2, pokemon1, pokemon2, move, movetype, multiplier) = get_quiz_questions()
+    (sprite1, sprite2, pokemon1, pokemon2, move, type_sprite, movetype, multiplier) = get_quiz_questions()
     global count
     global correctAnswers
     correctAnswers.append(float(multiplier))
@@ -51,8 +51,8 @@ def quiz():
     if count > 10:
         return results()
     else:
-        return render_template('quiz.html', the_title='Quiz!', count=count, sprite1=sprite1, sprite2=sprite2,
-                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, movetype=movetype, multiplier=multiplier)
+        return render_template('quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
+                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier)
 
     
 
@@ -70,6 +70,7 @@ def get_quiz_questions():
     move = poke_and_move[0]['move']
     movetype = poke_and_move[0]['movetype']
     type_relations = get_type_relations(defpoke, move, cursor)
+    type_sprite = get_type_sprite(movetype)
 
     multiplier = 1
     for type in poke_and_move:
@@ -82,8 +83,11 @@ def get_quiz_questions():
             multiplier = multiplier * 0.5
         elif relation[0] == 'immunity':
             multiplier = multiplier * 0
+    print(move)
+    print(type_sprite + "\n")
+    print(atkpokesprite + "\n")
     
-    return (atkpokesprite, defpokesprite, atkpoke, defpoke, move, movetype, multiplier)
+    return (atkpokesprite, defpokesprite, atkpoke, defpoke, move, type_sprite, movetype, multiplier)
 
 
 
@@ -113,8 +117,6 @@ def get_answer():
     answers.append(float(x))
     print(x)
     print(answers)
-    global count
-    count = count + 1
     return '', 204
     
 

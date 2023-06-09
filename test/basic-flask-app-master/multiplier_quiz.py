@@ -36,3 +36,44 @@ def get_type_relations(defpokemon, move, cursor):
                                       WHERE move = '%s') as b""" %(defpokemon, move)
     cursor.execute(type_relations)
     return cursor.fetchall()
+
+def get_type_sprite(type):
+    if type == 'BUG':
+        return "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BugIC_SV.png/180px-BugIC_SV.png"
+    elif type == 'DARK':
+        return "https://archives.bulbagarden.net/media/upload/thumb/3/30/DarkIC_SV.png/180px-DarkIC_SV.png"
+    elif type == 'DRAGON':
+        return "https://archives.bulbagarden.net/media/upload/thumb/7/7f/DragonIC_SV.png/180px-DragonIC_SV.png"
+    elif type == 'ELECTRIC':
+        return "https://archives.bulbagarden.net/media/upload/thumb/7/77/ElectricIC_SV.png/180px-ElectricIC_SV.png"
+    elif type == 'FAIRY':
+        return "https://archives.bulbagarden.net/media/upload/thumb/c/c6/FairyIC_SV.png/180px-FairyIC_SV.png"
+    elif type == 'FIGHTING':
+        return "https://archives.bulbagarden.net/media/upload/thumb/0/0f/FightingIC_SV.png/180px-FightingIC_SV.png"
+    elif type == 'FIRE':
+        return "https://archives.bulbagarden.net/media/upload/thumb/a/a2/FireIC_SV.png/180px-FireIC_SV.png"
+    elif type == 'FLYING':
+        return "https://archives.bulbagarden.net/media/upload/thumb/d/d7/FlyingIC_SV.png/180px-FlyingIC_SV.png"
+    elif type == 'GHOST':
+        return "https://archives.bulbagarden.net/media/upload/thumb/2/2c/GhostIC_SV.png/180px-GhostIC_SV.png"
+    elif type == 'GRASS':
+        return "https://archives.bulbagarden.net/media/upload/thumb/7/7b/GrassIC_SV.png/180px-GrassIC_SV.png"
+    elif type == 'GROUND':
+        return "https://archives.bulbagarden.net/media/upload/thumb/f/f8/GroundIC_SV.png/180px-GroundIC_SV.png"
+    elif type == 'ICE':
+        return "https://archives.bulbagarden.net/media/upload/thumb/1/13/IceIC_SV.png/180px-IceIC_SV.png"
+    elif type == 'NORMAL':
+        return "https://archives.bulbagarden.net/media/upload/thumb/0/08/NormalIC_SV.png/180px-NormalIC_SV.png"
+    elif type == 'POISON':
+        return "https://archives.bulbagarden.net/media/upload/thumb/9/9d/PoisonIC_SV.png/180px-PoisonIC_SV.png"
+    elif type == 'PSYCHIC':
+        return "https://archives.bulbagarden.net/media/upload/thumb/9/96/PsychicIC_SV.png/180px-PsychicIC_SV.png"
+    elif type == 'ROCK':
+        return "https://archives.bulbagarden.net/media/upload/thumb/3/32/RockIC_SV.png/180px-RockIC_SV.png"
+    elif type == 'STEEL':
+        return "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SteelIC_SV.png/180px-SteelIC_SV.png"
+    elif type == 'WATER':
+        return "https://archives.bulbagarden.net/media/upload/thumb/d/de/WaterIC_SV.png/180px-WaterIC_SV.png"
+    else:
+        return "https://archives.bulbagarden.net/media/upload/thumb/f/f8/UnknownIC_SV.png/180px-UnknownIC_SV.png"
+        
