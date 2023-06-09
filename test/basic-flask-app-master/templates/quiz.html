@@ -21,44 +21,56 @@
   <img src={{sprite2}} alt="Pokemon 2" width="100" height="100">
   <p>move used: {{move}}</p>
   <p>move type: {{movetype}}</p>
-  <p>multi: {{multiplier}}</p>
-  
-
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="0">0</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="0.25">1/4</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="0.375">3/8</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="0.5">1/2</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="0.75">3/4</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="1">1</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="1.5">3/2</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="2">2</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="3">3</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="4">4</button>
-  </form>
-  <form action="/get_answer" method="post">
-    <button type="submit" name="answer" value="6">6</button>
-  </form>
+  <p></p>
 
 
+  <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
+
+<div id="myText"></div>
+
+<script>
+  function nextFunction() {
+    //disable button class
+    window.location.href = '{{ url_for('quiz') }}';
+  }
+</script>
+
+<script>
+  function myFunction() {
+    
+    var multiplier = "{{multiplier}}";
+    var text = "multi: " + multiplier;
+    var paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    document.getElementById("myText").appendChild(paragraph);
+    document.getElementById("next_button").disabled = false;
+    
+    window.setTimeout(myHelper, 1);  
+  }
+
+  function myHelper() {
+    for (var i = 1; i < 12; i++) {
+      document.getElementById("b_" + i).disabled = true;
+    }
+  }
+</script>
+
+  <form action="/get_answer" method="post">
+    <div class="w3-bar">
+    <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction()" type="submit" name="answer" value="0">0</button>
+    <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction()" type="submit" name="answer" value="0.25">1/4</button>
+    <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction()" type="submit" name="answer" value="0.375">3/8</button>
+    <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction()" type="submit" name="answer" value="0.5">1/2</button>
+    <button class="w3-button w3-light-blue" id="b_5" onclick="myFunction()" type="submit" name="answer" value="0.75">3/4</button>
+    <button class="w3-button w3-light-blue" id="b_6" onclick="myFunction()" type="submit" name="answer" value="1">1</button>
+    <button class="w3-button w3-light-blue" id="b_7" onclick="myFunction()" type="submit" name="answer" value="1.5">3/2</button>
+    <button class="w3-button w3-light-blue" id="b_8" onclick="myFunction()" type="submit" name="answer" value="2">2</button>
+    <button class="w3-button w3-light-blue" id="b_9" onclick="myFunction()" type="submit" name="answer" value="3">3</button>
+    <button class="w3-button w3-light-blue" id="b_10" onclick="myFunction()" type="submit" name="answer" value="4">4</button>
+    <button class="w3-button w3-light-blue" id="b_11" onclick="myFunction()" type="submit" name="answer" value="6">6</button>
+    <button type="button" class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" disabled>Next</button>
+    </div>
+  </form>
 
   <form method="POST" action="/results.html">
     {% for question in questions %}

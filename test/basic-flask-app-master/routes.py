@@ -37,6 +37,8 @@ def results():
     global answers
     print("answers: ", answers)
     print(answers)
+    global score
+    score = calculate_score(answers, correctAnswers)
     return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
 
 @app.route('/quizs.html')
@@ -94,9 +96,9 @@ def update_variable():
 
 def calculate_score(answers, correct_answers):
     score = 0
-    for key in answers:
-        if answers[key] == correct_answers[key]:
-            score += 1
+    for i in range(len(answers)):
+        if answers[i] == correct_answers[i]:
+            score = score + 1
     return score
 
 
@@ -111,7 +113,10 @@ def get_answer():
     answers.append(float(x))
     print(x)
     print(answers)
-    return quiz()
+    global count
+    count = count + 1
+    return '', 204
+    
 
 
 if __name__ == '__main__':
