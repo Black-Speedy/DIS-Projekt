@@ -12,6 +12,16 @@
 
 
 <body>
+    <p>Your answers: </p>
+    {% for i in range(answers|length) %}
+    <h3>Your answer:{{ answers[i] }} The correct answer {{correctAnswers[i]}} : 
+        {% if ((answers[i]) - (correctAnswers[i])) < 0.01 and ((answers[i]) - (correctAnswers[i])) > -0.01  %}
+        Correct
+        {% else %}
+        Incorrect
+        {% endif %}
+    </h3>
+    {% endfor %}
     <button onclick="window.location.href='{{ url_for('index') }}'">Back to homepage</button>
 </body>
 

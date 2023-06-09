@@ -6,7 +6,8 @@ from multiplier_quiz import *
 app = Flask(__name__)
 
 count = 0
-answers = {}
+answers = []
+correctAnswers = []
 score = 0
 
 conn = psycopg2.connect(
@@ -24,29 +25,29 @@ cursor = conn.cursor(cursor_factory=DictCursor)
 def index():
     global count
     count = 0
+    global answers
+    answers = []
+    global correctAnswers
+    correctAnswers = []
     return render_template('index.html', the_title='Pokemon Quiz')
 
 
 @app.route('/results.html', methods=['POST'])
 def results():
-    # Retrieve the submitted answers from the form
-    answers = {key: request.form.get(key) for key in request.form}
-
-    # Retrieve the correct answers from the database
-    correct_answers = get_correct_answers()
-
-    # Calculate the score
-    score = calculate_score(answers, correct_answers)
-
-    return render_template('results.html', the_title='Results', score=score)
+    global answers
+    print("answers: ", answers)
+    print(answers)
+    return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
 
 @app.route('/quizs.html')
 def quiz():
     (sprite1, sprite2, pokemon1, pokemon2, move, movetype, multiplier) = get_quiz_questions()
     global count
+    global correctAnswers
+    correctAnswers.append(float(multiplier))
     count = count + 1
     if count > 10:
-        return render_template('results.html', the_title='Results', score=score)
+        return results()
     else:
         return render_template('quiz.html', the_title='Quiz!', count=count, sprite1=sprite1, sprite2=sprite2,
                                pokemon1=pokemon1, pokemon2=pokemon2, move=move, movetype=movetype, multiplier=multiplier)
@@ -102,20 +103,16 @@ def calculate_score(answers, correct_answers):
 def get_correct_answers():
     return True
 
-# rendering the HTML page which has the button
 
+@app.route('/get_answer', methods=['POST'])
+def get_answer():
+    x = request.form.get('answer')
+    global answers
+    answers.append(float(x))
+    print(x)
+    print(answers)
+    return quiz()
 
-@app.route('/json')
-def json():
-    return render_template('json.html')
-
-# background process happening without any refreshing
-
-
-@app.route('/background_process_test')
-def background_process_test():
-    print("Hello")
-    return ("nothing")
 
 if __name__ == '__main__':
     app.run(debug=True)
