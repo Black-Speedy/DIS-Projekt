@@ -31,6 +31,15 @@ def index():
     correctAnswers = []
     return render_template('index.html', the_title='Pokemon Quiz')
 
+@app.route('/multiquiz_startpage.html')
+def multi_start():
+    global count
+    count = 0
+    global answers
+    answers = []
+    global correctAnswers
+    correctAnswers = []
+    return render_template('mult_startpg.html')
 
 @app.route('/results.html', methods=['POST'])
 def results():
@@ -53,8 +62,7 @@ def quiz():
     else:
         return render_template('quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
                                pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier)
-
-    
+ 
 
 def get_quiz_questions():
     """ with open('path/to/quiz_questions.sql', 'r') as file:

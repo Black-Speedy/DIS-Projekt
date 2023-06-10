@@ -11,20 +11,20 @@
 
   <div class="w3-third">
     <div class="w3-card-4">
-      <img src={{sprite1}}  alt="Pokemon 1" style="width:100%">
+      <img src={{sprite1}}  alt="Pokemon 1" style="width:90%">
       <div class="w3-container">
         <p>{{pokemon1}}</p>
         </div>
     </div>
     </div>
   <div class="w3-third">
-  <p>{{move}}</p>
+  <p>{{ move }}</p>
   <img src=https://media.discordapp.net/attachments/1104761878573494392/1116754753100206131/attack_arrow.png?width=637&height=492  alt="Pokemon 1" style="width:70%">
-  <img src={{ type_sprite }}  alt="type" style="width:100%">
+  <img src={{type_sprite}} width=160px height=50px>
 </div>
   <div class="w3-third">
     <div class="w3-card-4">
-      <img src={{sprite2}}  alt="Pokemon 2" style="width:100%">
+      <img src={{sprite2}}  alt="Pokemon 2" style="width:90%">
       <div class="w3-container">
         <p>{{pokemon2}}</p>
         </div>
@@ -40,6 +40,7 @@
   function nextFunction() {
     //disable button class
     window.location.href = '{{ url_for('quiz') }}';
+    //window.location.href = '{next_question()}';
   }
 </script>
 
@@ -47,7 +48,7 @@
   function myFunction() {
     
     var multiplier = "{{multiplier}}";
-    var text = "multi: " + multiplier;
+    var text = "Answer: " + multiplier;
     var paragraph = document.createElement("p");
     paragraph.textContent = text;
     document.getElementById("myText").appendChild(paragraph);
@@ -59,6 +60,10 @@
   function myHelper() {
     for (var i = 1; i < 12; i++) {
       document.getElementById("b_" + i).disabled = true;
+
+      //if (abs(document.getElementById("b_" + i).value - multiplier) < 0.01){
+        //document.getElementById("b_" + i).class = "w3-button w3-green"};
+      
     }
   }
 </script>
@@ -80,18 +85,7 @@
     </div>
   </form>
 
-  <form method="POST" action="/results.html">
-    {% for question in questions %}
-    <h3>{{ question.pokemon }}</h3>
-    <img src={{question.sprite}}>
-    {% endfor %}
-
-
-  </form>
-
 </body>
-
-
 
 
 {% endblock %}

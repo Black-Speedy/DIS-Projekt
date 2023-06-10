@@ -269,11 +269,11 @@ Magnemite,Analytic,true
 Magneton,Magnet Pull,false
 Magneton,Sturdy,false
 Magneton,Analytic,true
-Farfetch'd,Keen Eye,false
-Farfetch'd,Inner Focus,false
-Farfetch'd,Defiant,true
-Farfetch’d-Galar,Steadfast,false
-Farfetch’d-Galar,Scrappy,true
+Farfetchd,Keen Eye,false
+Farfetchd,Inner Focus,false
+Farfetchd,Defiant,true
+Farfetchd-Galar,Steadfast,false
+Farfetchd-Galar,Scrappy,true
 Doduo,Run Away,false
 Doduo,Early Bird,false
 Doduo,Tangled Feet,true
@@ -2229,8 +2229,8 @@ Perrserker,Tough Claws,false
 Perrserker,Steely Spirit,true
 Cursola,Weak Armor,false
 Cursola,Perish Body,true
-Sirfetch'd,Steadfast,false
-Sirfetch'd,Scrappy,true
+Sirfetchd,Steadfast,false
+Sirfetchd,Scrappy,true
 Mr. Rime,Tangled Feet,false
 Mr. Rime,Screen Cleaner,false
 Mr. Rime,Ice Body,true
@@ -2288,7 +2288,7 @@ Kubfu,Inner Focus,false
 Urshifu,Unseen Fist,false
 Zarude,Leaf Guard,false
 Regieleki,Transistor,false
-Regidrago,Dragon's Maw,false
+Regidrago,Dragons Maw,false
 Glastrier,Chilling Neigh,false
 Spectrier,Grim Neigh,false
 Calyrex,Unnerve,false

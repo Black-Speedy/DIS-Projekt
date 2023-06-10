@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="w3-container w3-center">
+
+    <h1>Multiplier Quiz</h1>
+    <p> The goal of this quiz is to guess the correct multiplier applied to the attacking Pokémon's move based on the type of the attacker, defender and move used. </p>
+  
+    <h2> Rules </h2>
+    <p> Considering the attacking Pokémon on the left, defending Pokémon on the right and move displayed on the middle, click on the correct multiplier. Do not take abilities and secondary move effects into consideration for the calculation.</p>
+  
+    <h2> Hints </h2>
+  
+    <ul>
+        <li> When a move is super-effective againts a type, it is multiplied by 2. </li>
+        <li> When a move is not very effective againts a type, it is multiplied by 0.5. </li>
+        <li> If a move hits a Pokémon with 2 types, both types are included in the calculation. For example, if both types are weak to the move, the multiplier becomes 4. </li>
+        <li> Same-type attack bonus (STAB) is a multiplier of 1.5 applied when the attacker uses a move of the same type as one of its own types. </li>
+    </ul>
+    <br>
+  
+    <div>
+       <button class="w3-button w3-light-blue" id="b_1" onclick="window.location.href='{{ url_for('quiz') }}'">Start Quiz</button>
+    </div>
+    <br>
+  
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/800px-Pokemon_Type_Chart.svg.png" alt="Type table" style="width:100%">
+  
+  </div>
+
+  {% endblock %}

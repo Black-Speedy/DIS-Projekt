@@ -33,6 +33,15 @@
       height: 80px;
       margin-right: 40px;
     }
+    .leftshift {
+      text-indent: 20px;
+    }
+    p {text-align: center;
+    }
+    ul {
+      text-align: center;
+      list-style-position: inside;
+    }
   </style>
 </head>
 
@@ -46,7 +55,7 @@
      <div class="w3-dropdown-hover w3-hide-small">
      <button class="w3-button w3-hover-white" title="Notifications">Quizzes <i class="fa fa-caret-down"></i></button>     
      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-       <a onclick="window.location.href='{{ url_for('quiz') }}'" class="w3-bar-item w3-button w3-hover-red">Damage Multiplier</a>
+       <a onclick="window.location.href='{{ url_for('multi_start') }}'" class="w3-bar-item w3-button w3-hover-red">Damage Multiplier</a>
        <a href="#" class="w3-bar-item w3-button w3-hover-red">Evolution method</a>
        <a href="#" class="w3-bar-item w3-button w3-hover-red">breeding for moves</a>
      </div>
