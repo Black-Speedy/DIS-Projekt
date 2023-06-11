@@ -16,7 +16,7 @@ Sprite varchar
 );
 
 COPY pokemon
-FROM 'C:/Users/matin/Documents/Github/DIS-Projekt/bank/pokemon-all-data.csv'
+FROM 'C:/Users/Max/Documents/Github/DIS-Projekt/pokemon-csv-files/pokemon-all-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -32,7 +32,7 @@ PowerPoints int
 );
 
 COPY moves
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\move-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\move-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -45,7 +45,7 @@ Relation varchar
 );
 
 COPY typeRelations
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\type-relation-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\type-relation-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -58,7 +58,7 @@ Hidden varchar
 );
 
 COPY pokemonAbilities
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-ability-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-ability-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -70,7 +70,7 @@ Egg_Group varchar
 );
 
 COPY eggData
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-egg-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-egg-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -83,7 +83,7 @@ Method varchar
 );
 
 COPY evolutionData
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-evolution-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-evolution-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -96,7 +96,7 @@ Source varchar
 );
 
 COPY pokemonMove
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-move-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-move-data.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -108,7 +108,7 @@ Type varchar
 );
 
 COPY pokemonTypes
-FROM 'C:\Users\matin\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-type-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-type-data.csv'
 DELIMITER ','
 CSV HEADER;
 
