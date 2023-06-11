@@ -8,87 +8,66 @@
   <p>Question {{count}} of 10</p>
 
 
-  <div class="w3-third">
-    <div class="w3-card-4">
-      <img src={{sprite1}}  alt="Pokemon 1" style="width:90%">
-      <div class="w3-container">
-        <p>{{pokemon1}}</p>
-        </div>
-    </div>
-    </div>
-  <div class="w3-third">
-  <p>{{ move }}</p>
-  <img src=https://media.discordapp.net/attachments/1104761878573494392/1116754753100206131/attack_arrow.png?width=637&height=492  alt="Pokemon 1" style="width:70%">
-  <img src={{type_sprite}} width=160px height=50px>
-</div>
-  <div class="w3-third">
-    <div class="w3-card-4">
-      <img src={{sprite2}}  alt="Pokemon 2" style="width:90%">
-      <div class="w3-container">
-        <p>{{pokemon2}}</p>
-        </div>
-    </div>
-    </div>
-
-
+  <div class="w3-container w3-center">
+    <p> The Pokémon can have the ability {{ability}} and is in the egg group {{egggroup}}. Its highest stat is {{highest_stat}} and {{evo_method}}. </p>
+    <br>
+  </div>
 
 <p id="myText"></p>
 
   <script>
-    valuePicked = -1;
-
     function myFunction(e, value) {
 
-      document.getElementById("myText").innerHTML = "Answer: {{multiplier}}";
-      document.getElementById("next_button").disabled = false;
-      e.currentTarget.setAttribute("class", "w3-button w3-red");
+    document.getElementById("next_button").disabled = false;
 
-      valuePicked = value;
+    e.currentTarget.setAttribute("class", "w3-card-4 w3-red");
 
-      for (var i = 1; i < 5; i++) {
-        var bvalue = document.getElementById("b_" + i).value;
+valuePicked = value;
 
-        if (Math.abs(parseFloat(bvalue) - parseFloat("{{multiplier}}")) < 0.01) {
-          document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
-        }
-        document.getElementById("b_" + i).disabled = true;
-      }
-    }
+for (var i = 1; i < 5; i++) {
+  var bvalue = document.getElementById("b_" + i).getAttribute('value');
+
+  if (Math.abs(parseFloat(bvalue) - parseFloat("{{answer}}")) < 0.01) {
+    document.getElementById("b_" + i).setAttribute("class", "w3-card-4 w3-green");
+  }
+  document.getElementById("b_" + i).setAttribute("onclick", "");
+}
+}
 
     function nextFunction() {
         document.getElementById('next_button').value = valuePicked;
       }
   </script>
 
-<div class="w3-third">
-  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_1" onclick="myFunction(event, {{stat1}})" type="submit" name="answer" value="{{stat1}}">
+<div class="w3-quarter">
+  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_1" onclick="myFunction(event, 1)" type="submit" name="answer" value="1">
     <img  src={{sprite1}}  alt="Pokemon 1" style="width:80%">
     <div>
-      <p id="poke1">{{pokemon1}}</p>
+      <p>{{pokemon1}}</p>
     </div>
   </div>
 </div>
-<div class="w3-third">
-  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_2" onclick="myFunction(event, {{stat1}})" type="submit" name="answer" value="{{stat1}}">
+<div class="w3-quarter">
+  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_2" onclick="myFunction(event, 2)" type="submit" name="answer" value="2">
     <img  src={{sprite2}}  alt="Pokemon 2" style="width:80%">
     <div>
-      <p id="poke2">{{pokemon2}}</p>
+      <p>{{pokemon2}}</p>
     </div>
   </div>
 </div>
-<div class="w3-third">
-  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_3" onclick="myFunction(event, {{stat1}})" type="submit" name="answer" value="{{stat1}}">
+<div class="w3-quarter">
+  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_3" onclick="myFunction(event, 3)" type="submit" name="answer" value="3">
     <img  src={{sprite3}}  alt="Pokemon 3" style="width:80%">
     <div>
-      <p id="poke3">{{pokemon3}}</p>
+      <p>{{pokemon3}}</p>
     </div>
   </div>
 </div>
-<div class="w3-third">
-  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_4" onclick="myFunction(event, {{stat1}})" type="submit" name="answer" value="{{stat1}}">
+<div class="w3-quarter">
+  <div class="w3-card-4 w3-light-blue w3-hover-light-grey" id="b_4" onclick="myFunction(event, 4)" type="submit" name="answer" value="4">
     <img  src={{sprite4}}  alt="Pokemon 4" style="width:80%">
     <div>
-      <p id="poke4">{{pokemon4}}</p>
+      <p>{{pokemon4}}</p>
     </div>
   </div>
 </div>

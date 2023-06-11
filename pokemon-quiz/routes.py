@@ -88,7 +88,7 @@ def stat_quiz():
     (pokemon1, stat1, sprite1, pokemon2, stat2, sprite2, pokemon3, stat3, sprite3, pokemon4, stat4, sprite4, stat, answer) = get_quiz_questions("stat_quiz")
     global count
     global correctAnswers
-    correctAnswers.append(int(answer))
+    correctAnswers.append(float(answer))
     count = count + 1
     global current_quiz
     current_quiz = "stat_quiz"
@@ -102,10 +102,10 @@ def stat_quiz():
 
 @app.route('/hints_quiz.html')
 def hints_quiz():
-    (pokemon1, stat1, sprite1, pokemon2, stat2, sprite2, pokemon3, stat3, sprite3, pokemon4, stat4, sprite4, stat, answer) = get_quiz_questions("stat_quiz")
+    (pokemon1, sprite1, pokemon2, sprite2, pokemon3, sprite3, pokemon4, sprite4, evo_method, ability, egggroup, highest_stat, answer) = get_quiz_questions("hints_quiz")
     global count
     global correctAnswers
-    correctAnswers.append(int(answer))
+    correctAnswers.append(float(answer))
     count = count + 1
     global current_quiz
     current_quiz = "hints_quiz"
@@ -114,8 +114,8 @@ def hints_quiz():
         return results()
     else:
         return render_template('hints_quiz.html', count=count, pokemon1=pokemon1, pokemon2=pokemon2, pokemon3=pokemon3, pokemon4=pokemon4,
-                                stat1=stat1, stat2=stat2, stat3=stat3, stat4=stat4, 
-                                sprite1=sprite1, sprite2=sprite2, sprite3=sprite3, sprite4=sprite4, stat=stat, answer=answer)
+                                sprite1=sprite1, sprite2=sprite2, sprite3=sprite3, sprite4=sprite4, 
+                                evo_method=evo_method, ability=ability, egggroup=egggroup, highest_stat=highest_stat, answer=answer)
 
 
 def get_quiz_questions(quiz_type):
