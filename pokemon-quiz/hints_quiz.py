@@ -42,22 +42,22 @@ def get_highest_stat(cursor, pokemon):
 
 # Gets an incorrect answer that does not share both ability and egg group as the input values, but shares whether it is able to evolve.
 def get_incorrect(cursor, evolves, ability, egg):
-    if (evolves):
+    if (evolves != "it does not evolve"):
         choice = """WITH choices AS (SELECT pokemon, sprite, ability, egg_group
                         FROM pokemon NATURAL JOIN pokemonabilities NATURAL JOIN eggdata)
 
                     SELECT pokemon, sprite FROM choices
                     WHERE NOT (ability = '%s' AND egg_group = '%s')
                     AND pokemon IN (SELECT pre_evolution FROM evolutiondata)
-                    ORDER BY RANDOM() LIMIT 1;""" %(ability, egg)
-    if (not evolves):
+                    ORDER BY RANDOM() LIMIT 5;""" %(ability, egg)
+    if (evolves == "it does not evolve"):
         choice = """WITH choices AS (SELECT pokemon, sprite, ability, egg_group
                         FROM pokemon NATURAL JOIN pokemonabilities NATURAL JOIN eggdata)
 
                     SELECT pokemon, sprite FROM choices
                     WHERE NOT (ability = '%s' AND egg_group = '%s')
                     AND pokemon NOT IN (SELECT pre_evolution FROM evolutiondata)
-                    ORDER BY RANDOM() LIMIT 1;""" %(ability, egg)
+                    ORDER BY RANDOM() LIMIT 5;""" %(ability, egg)
         
     cursor.execute(choice)
     return cursor.fetchall() 
@@ -65,7 +65,6 @@ def get_incorrect(cursor, evolves, ability, egg):
 
 def get_hints_quiz_question(cursor):
     ansPokemon = get_ansPokemon(cursor)
-    print(ansPokemon)
     ansPokemon_name = ansPokemon[0]['pokemon']
     ansPokemon_sprite = ansPokemon[0]['sprite']
     evo_method = get_evo_method(cursor, ansPokemon_name)
@@ -79,7 +78,6 @@ def get_hints_quiz_question(cursor):
 
     statq = get_highest_stat(cursor, ansPokemon_name)
     highest_stat = statq[0].index(max(statq[0]))
-    print(highest_stat)
     if highest_stat == 0:
         highest_stat = "hp"
     elif highest_stat == 1:
@@ -94,12 +92,14 @@ def get_hints_quiz_question(cursor):
         highest_stat = "speed"
 
     answer = random.randint(1,4)
+    wrong_answer = get_wrong_answer(cursor, evo_method, ability, egggroup)
+    print(wrong_answer) 
     quiz_elements = ()
     for i in ([1, 2, 3, 4]):
         if i == answer:
             quiz_elements = quiz_elements + (ansPokemon_name, ansPokemon_sprite)
         else:
-            quiz_elements = quiz_elements + get_wrong_answer(cursor, evo_method, ability, egggroup)
+            quiz_elements = quiz_elements + (wrong_answer[i]['pokemon'], wrong_answer[i]['sprite'])
 
     quiz_elements = quiz_elements + (evo_method, ability, egggroup, highest_stat, answer)         
     
@@ -107,9 +107,7 @@ def get_hints_quiz_question(cursor):
         
 def get_wrong_answer(cursor, evolves, ability, egg):
     wrong = get_incorrect(cursor, evolves, ability, egg)
-    wrong_name = wrong[0]['pokemon']
-    wrong_sprite = wrong[0]['sprite']
-    return (wrong_name, wrong_sprite)
+    return wrong
     
 
     
