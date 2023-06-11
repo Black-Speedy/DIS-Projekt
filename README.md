@@ -20,3 +20,5 @@ $ python3 routes.py
 ## Notes
 As a baseline we used the github repository: https://github.com/macloo/basic-flask-app. From there we modified and deleted parts of it.
 We also used parts of css templates from https://www.w3schools.com/, links can be seen at the top of base.html.
+
+Our memebers are Boas (fnp651), Mona (rhc605), Max (rxv292) and Matin (qhw109), and we are a combination of group 144 and 145. 
