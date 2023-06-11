@@ -8,7 +8,7 @@ Run the code below to install the necessary modules.
 
 ## Database init
 1. setup your databse in route.py file.
-2. edit create_tables.sql to reflect your systems filepath.
+2. edit 8 lines of create_tables.sql to reflect your systems filepath.
 2. run create_tables.sql in your database.
 
 ## Running flask
