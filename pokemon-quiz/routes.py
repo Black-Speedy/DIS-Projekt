@@ -16,7 +16,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="postgres",
     user="postgres",
-    password="miramax1"
+    password="0301"
 )
 
 cursor = conn.cursor(cursor_factory=DictCursor)
@@ -123,6 +123,18 @@ def get_answer():
         return multi_quiz()
     else:
         return "error"
+
+@app.route('/restart_quiz', methods=['POST'])
+def restart_quiz():
+    if current_quiz == "stat_quiz":
+        reset_count()
+        return stat_quiz()
+    elif current_quiz == "multi_quiz":
+        reset_count()
+        return  multi_quiz()
+    else:
+        return "error"
+
     
 
 if __name__ == '__main__':

@@ -8,6 +8,12 @@
 <body>
     <h3>You got {{ score }} / {{answers|length}} correct </h3>
     <button class="w3-button w3-light-blue" onclick="window.location.href='{{ url_for('index') }}'">Back to homepage</button>
+    <form action="/restart_quiz" method="post">
+        <div class="w3-bar">
+            <br>
+            <button class="w3-button w3-light-blue" type="submit">Retake Quiz</button>
+        </div>
+    </form>
 </body>
 
 
