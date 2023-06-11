@@ -4,8 +4,6 @@
 
 
 <body>
-  <!-- There should be 4 buttoms for possible answers -->
- 
   <p>Question {{count}} of 10</p>
 
 
@@ -32,57 +30,39 @@
     </div>
 
 
-  <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
 
 <div id="myText"></div>
 
+  <script>
+    valuePicked = -1;
 
-{% set valuePicked = -1 %}
+    function myFunction(e, value) {
+      var multiplier = "{{multiplier}}";
+      var text = "Answer: " + multiplier;
+      var paragraph = document.createElement("p");
+      paragraph.textContent = text;
+      document.getElementById("myText").appendChild(paragraph);
+      document.getElementById("next_button").disabled = false;
+      e.currentTarget.setAttribute("class", "w3-button w3-red");
 
-<script>
+      valuePicked = value;
 
-  valuePicked = -1;
+      for (var i = 1; i < 12; i++) {
+        var bvalue = document.getElementById("b_" + i).value;
 
-  function myFunction(e, value) {
-    
-    
-    var multiplier = "{{multiplier}}";
-    var text = "Answer: " + multiplier;
-    var paragraph = document.createElement("p");
-    paragraph.textContent = text;
-    document.getElementById("myText").appendChild(paragraph);
-    document.getElementById("next_button").disabled = false;
-    e.currentTarget.setAttribute("class", "w3-button w3-red");
-
-    valuePicked = value;
-    
-    setTimeout(myHelper(multiplier, e), 0); 
-
-  }
-
-  function myHelper(answer, e) {
-    for (var i = 1; i < 12; i++) {
-      var bvalue = document.getElementById("b_" + i).value;
-      
-      if (Math.abs(parseFloat(bvalue) - parseFloat(answer)) < 0.01) {
-        document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
+        if (Math.abs(parseFloat(bvalue) - parseFloat(multiplier)) < 0.01) {
+          document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
+        }
+      }
+      for (var i = 1; i < 12; i++) {
+        document.getElementById("b_" + i).disabled = true;
       }
     }
-    for (var i = 1; i < 12; i++) {
-      document.getElementById("b_" + i).disabled = true;
-    }
-  }
 
-  function nextFunction() {
-      //disable button class
-      //window.location.href = '{{ url_for('multi_quiz') }}';
-      document.getElementById('next_button').value = valuePicked;
-    }
-
-</script>
-
-
-
+    function nextFunction() {
+        document.getElementById('next_button').value = valuePicked;
+      }
+  </script>
 
   <form action="/get_answer" method="post">
     <div class="w3-bar">
@@ -100,10 +80,6 @@
     <button  class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" type="submit" name="answer" value="{{ valuePicked }}"disabled>Next</button>
     </div>
   </form>
-
-
-
 </body>
-
 
 {% endblock %}

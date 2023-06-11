@@ -32,24 +32,6 @@ def index():
     correctAnswers = []
     return render_template('index.html', the_title='Pokemon Quiz')
 
-@app.route('/my_function')
-def my_function():
-    # Retrieve the values from the query string
-    value1 = request.args.get('param1')
-    value2 = request.args.get('param2')
-
-    global answers
-    global correctAnswers
-    answers.append(float(value1))
-    correctAnswers.append(float(value2))
-
-    print("answers: ", answers)
-    print("correctAnswers: ", correctAnswers)
-
-    # Perform the desired logic or invoke the function here using the values
-    # ...
-
-    return 'Function invoked with values: {} and {}'.format(value1, value2) 
 
 @app.route('/multiquiz_startpage.html')
 def multi_start():
@@ -61,6 +43,7 @@ def multi_start():
     correctAnswers = []
     return render_template('mult_startpg.html')
 
+
 @app.route('/results.html', methods=['POST'])
 def results():
     global answers
@@ -70,6 +53,7 @@ def results():
     score = calculate_score(answers, correctAnswers)
     return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
 
+
 @app.route('/multi_quiz.html')
 def multi_quiz():
     (sprite1, sprite2, pokemon1, pokemon2, move, type_sprite, movetype, multiplier) = get_quiz_questions("multi_quiz")
@@ -78,12 +62,12 @@ def multi_quiz():
     correctAnswers.append(float(multiplier))
     count = count + 1
 
-    valuePicked = -1.0
     if count > 10:
         return results()
     else:
         return render_template('multi_quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
-                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier, valuePicked=valuePicked)
+                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier)
+
 
 @app.route('/stat_quiz.html')
 def stat_quiz():
@@ -106,16 +90,7 @@ def get_quiz_questions(quiz_type):
         return get_multi_quiz_question(cursor)
     elif quiz_type == "stat_quiz":
         return get_stat_quiz_question(cursor)
-        
 
-
-
-@app.route('/update-variable', methods=['POST'])
-def update_variable():
-    answer = request.form.get('answer')
-    # Update global variables or perform logic based on the 'answer' value
-
-    return 'Variable updated'  # Or any other response you want
 
 def calculate_score(answers, correct_answers):
     score = 0
@@ -125,21 +100,14 @@ def calculate_score(answers, correct_answers):
     return score
 
 
-def get_correct_answers():
-    return True
-
-
 @app.route('/get_answer', methods=['POST'])
 def get_answer():
-    # wait for 1 ms
     x = request.form.get('answer')
     global answers
     answers.append(float(x))
-    print(x)
     print(answers)
     return multi_quiz()
     
-
 
 if __name__ == '__main__':
     app.run(debug=True)
