@@ -32,6 +32,25 @@ def index():
     correctAnswers = []
     return render_template('index.html', the_title='Pokemon Quiz')
 
+@app.route('/my_function')
+def my_function():
+    # Retrieve the values from the query string
+    value1 = request.args.get('param1')
+    value2 = request.args.get('param2')
+
+    global answers
+    global correctAnswers
+    answers.append(float(value1))
+    correctAnswers.append(float(value2))
+
+    print("answers: ", answers)
+    print("correctAnswers: ", correctAnswers)
+
+    # Perform the desired logic or invoke the function here using the values
+    # ...
+
+    return 'Function invoked with values: {} and {}'.format(value1, value2) 
+
 @app.route('/multiquiz_startpage.html')
 def multi_start():
     global count
@@ -58,11 +77,13 @@ def multi_quiz():
     global correctAnswers
     correctAnswers.append(float(multiplier))
     count = count + 1
+
+    valuePicked = -1.0
     if count > 10:
         return results()
     else:
         return render_template('multi_quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
-                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier)
+                               pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier, valuePicked=valuePicked)
 
 @app.route('/stat_quiz.html')
 def stat_quiz():
@@ -110,12 +131,13 @@ def get_correct_answers():
 
 @app.route('/get_answer', methods=['POST'])
 def get_answer():
+    # wait for 1 ms
     x = request.form.get('answer')
     global answers
     answers.append(float(x))
     print(x)
     print(answers)
-    return '', 204
+    return multi_quiz()
     
 
 

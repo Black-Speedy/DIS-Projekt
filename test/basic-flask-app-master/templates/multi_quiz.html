@@ -34,56 +34,74 @@
 
   <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
 
-<p id="myText"></p>
+<div id="myText"></div>
+
+
+{% set valuePicked = -1 %}
 
 <script>
-  function nextFunction() {
-    //disable button class
-    window.location.href = '{{ url_for('multi_quiz') }}';
-  }
-</script>
 
+  valuePicked = -1;
 
-<script>
-  function myFunction(e) {
+  function myFunction(e, value) {
     
-    document.getElementById("myText").innerHTML = "Answer: {{multiplier}}";
+    
+    var multiplier = "{{multiplier}}";
+    var text = "Answer: " + multiplier;
+    var paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    document.getElementById("myText").appendChild(paragraph);
     document.getElementById("next_button").disabled = false;
     e.currentTarget.setAttribute("class", "w3-button w3-red");
 
-    window.setTimeout(myHelper("{{multiplier}}"), 1); 
+    valuePicked = value;
+    
+    setTimeout(myHelper(multiplier, e), 0); 
 
   }
 
-  function myHelper(answer) {
+  function myHelper(answer, e) {
     for (var i = 1; i < 12; i++) {
-      document.getElementById("b_" + i).disabled = true;
       var bvalue = document.getElementById("b_" + i).value;
-
+      
       if (Math.abs(parseFloat(bvalue) - parseFloat(answer)) < 0.01) {
         document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
       }
     }
+    for (var i = 1; i < 12; i++) {
+      document.getElementById("b_" + i).disabled = true;
+    }
   }
+
+  function nextFunction() {
+      //disable button class
+      //window.location.href = '{{ url_for('multi_quiz') }}';
+      document.getElementById('next_button').value = valuePicked;
+    }
 
 </script>
 
+
+
+
   <form action="/get_answer" method="post">
     <div class="w3-bar">
-    <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event)" type="submit" name="answer" value="0">0</button>
-    <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event)" type="submit" name="answer" value="0.25">1/4</button>
-    <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event)" type="submit" name="answer" value="0.375">3/8</button>
-    <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event)" type="submit" name="answer" value="0.5">1/2</button>
-    <button class="w3-button w3-light-blue" id="b_5" onclick="myFunction(event)" type="submit" name="answer" value="0.75">3/4</button>
-    <button class="w3-button w3-light-blue" id="b_6" onclick="myFunction(event)" type="submit" name="answer" value="1">1</button>
-    <button class="w3-button w3-light-blue" id="b_7" onclick="myFunction(event)" type="submit" name="answer" value="1.5">3/2</button>
-    <button class="w3-button w3-light-blue" id="b_8" onclick="myFunction(event)" type="submit" name="answer" value="2">2</button>
-    <button class="w3-button w3-light-blue" id="b_9" onclick="myFunction(event)" type="submit" name="answer" value="3">3</button>
-    <button class="w3-button w3-light-blue" id="b_10" onclick="myFunction(event)" type="submit" name="answer" value="4">4</button>
-    <button class="w3-button w3-light-blue" id="b_11" onclick="myFunction(event)" type="submit" name="answer" value="6">6</button>
-    <button type="button" class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" disabled>Next</button>
+    <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event, 0)" type="button" name="answer" value="0">0</button>
+    <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event, 0.25)" type="button" name="answer" value="0.25">1/4</button>
+    <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event, 0.375)" type="button" name="answer" value="0.375">3/8</button>
+    <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event, 0.5)" type="button" name="answer" value="0.5">1/2</button>
+    <button class="w3-button w3-light-blue" id="b_5" onclick="myFunction(event, 0.75)" type="button" name="answer" value="0.75">3/4</button>
+    <button class="w3-button w3-light-blue" id="b_6" onclick="myFunction(event, 1)" type="button" name="answer" value="1">1</button>
+    <button class="w3-button w3-light-blue" id="b_7" onclick="myFunction(event, 1.5)" type="button" name="answer" value="1.5">3/2</button>
+    <button class="w3-button w3-light-blue" id="b_8" onclick="myFunction(event, 2)" type="button" name="answer" value="2">2</button>
+    <button class="w3-button w3-light-blue" id="b_9" onclick="myFunction(event, 3)" type="button" name="answer" value="3">3</button>
+    <button class="w3-button w3-light-blue" id="b_10" onclick="myFunction(event, 4)" type="button" name="answer" value="4">4</button>
+    <button class="w3-button w3-light-blue" id="b_11" onclick="myFunction(event, 6)" type="button" name="answer" value="6">6</button>
+    <button  class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" type="submit" name="answer" value="{{ valuePicked }}"disabled>Next</button>
     </div>
   </form>
+
+
 
 </body>
 
