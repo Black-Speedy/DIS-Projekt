@@ -3,6 +3,7 @@ import psycopg2
 from flask import Flask, render_template, request
 from multiplier_quiz import *
 from stat_quiz import *
+from hints_quiz import *
 
 app = Flask(__name__)
 
@@ -49,10 +50,10 @@ def stat_start():
     reset_count()
     return render_template('stat_startpg.html')
 
-@app.route('/guessquiz_startpage.html')
-def guess_start():
+@app.route('/hintsquiz_startpage.html')
+def hints_start():
     reset_count()
-    return render_template('guess_startpg.html')
+    return render_template('hints_startpg.html')
 
 
 @app.route('/results.html', methods=['POST'])
@@ -99,20 +100,20 @@ def stat_quiz():
                                 stat1=stat1, stat2=stat2, stat3=stat3, stat4=stat4, 
                                 sprite1=sprite1, sprite2=sprite2, sprite3=sprite3, sprite4=sprite4, stat=stat, answer=answer)
 
-@app.route('/guess_quiz.html')
-def guess_quiz():
+@app.route('/hints_quiz.html')
+def hints_quiz():
     (pokemon1, stat1, sprite1, pokemon2, stat2, sprite2, pokemon3, stat3, sprite3, pokemon4, stat4, sprite4, stat, answer) = get_quiz_questions("stat_quiz")
     global count
     global correctAnswers
     correctAnswers.append(int(answer))
     count = count + 1
     global current_quiz
-    current_quiz = "guess_quiz"
+    current_quiz = "hints_quiz"
 
     if count > 10:
         return results()
     else:
-        return render_template('guess_quiz.html', count=count, pokemon1=pokemon1, pokemon2=pokemon2, pokemon3=pokemon3, pokemon4=pokemon4,
+        return render_template('hints_quiz.html', count=count, pokemon1=pokemon1, pokemon2=pokemon2, pokemon3=pokemon3, pokemon4=pokemon4,
                                 stat1=stat1, stat2=stat2, stat3=stat3, stat4=stat4, 
                                 sprite1=sprite1, sprite2=sprite2, sprite3=sprite3, sprite4=sprite4, stat=stat, answer=answer)
 
@@ -123,8 +124,8 @@ def get_quiz_questions(quiz_type):
         return get_multi_quiz_question(cursor)
     elif quiz_type == "stat_quiz":
         return get_stat_quiz_question(cursor)
-    elif quiz_type == "guess_quiz":
-        return get_guess_quiz_question(cursor)
+    elif quiz_type == "hints_quiz":
+        return get_hints_quiz_question(cursor)
 
 
 def calculate_score(answers, correct_answers):
@@ -145,8 +146,8 @@ def get_answer():
         return stat_quiz()
     elif current_quiz == "multi_quiz":
         return multi_quiz()
-    elif current_quiz == "guess_quiz":
-        return guess_quiz()
+    elif current_quiz == "hints_quiz":
+        return hints_quiz()
     else:
         return "error"
 
@@ -158,9 +159,9 @@ def restart_quiz():
     elif current_quiz == "multi_quiz":
         reset_count()
         return  multi_quiz()
-    elif current_quiz == "guess_quiz":
+    elif current_quiz == "hints_quiz":
         reset_count()
-        return  guess_quiz()
+        return  hints_quiz()
     else:
         return "error"
 
