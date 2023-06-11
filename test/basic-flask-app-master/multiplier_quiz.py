@@ -77,3 +77,33 @@ def get_type_sprite(type):
     else:
         return "static/images/notype.png"
         
+
+def get_multi_quiz_question(cursor):
+
+    defpokemon = get_defpokemon(cursor)
+    poke_and_move = get_poke_and_move(cursor)
+    defpoke = defpokemon[0]['pokemon']
+    defpokesprite = defpokemon[0]['sprite']
+    atkpoke = poke_and_move[0]['pokemon']
+    atkpokesprite = poke_and_move[0]['sprite']
+    move = poke_and_move[0]['move']
+    movetype = poke_and_move[0]['movetype']
+    type_relations = get_type_relations(defpoke, move, cursor)
+    type_sprite = get_type_sprite(movetype)
+
+    multiplier = 1
+    for type in poke_and_move:
+        if type['poketype'] == poke_and_move[0]['movetype']:
+            multiplier = multiplier * 1.5
+    for relation in type_relations:
+        if relation[0] == 'weakness':
+            multiplier = multiplier * 2
+        elif relation[0] == 'resistance':
+            multiplier = multiplier * 0.5
+        elif relation[0] == 'immunity':
+            multiplier = multiplier * 0
+    print(move)
+    print(type_sprite + "\n")
+    print(atkpokesprite + "\n")
+    
+    return (atkpokesprite, defpokesprite, atkpoke, defpoke, move, type_sprite, movetype, multiplier)

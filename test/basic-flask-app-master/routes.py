@@ -2,6 +2,7 @@ from psycopg2.extras import DictCursor
 import psycopg2
 from flask import Flask, render_template, request
 from multiplier_quiz import *
+from stat_quiz import *
 
 app = Flask(__name__)
 
@@ -50,9 +51,9 @@ def results():
     score = calculate_score(answers, correctAnswers)
     return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
 
-@app.route('/quiz.html')
-def quiz():
-    (sprite1, sprite2, pokemon1, pokemon2, move, type_sprite, movetype, multiplier) = get_quiz_questions()
+@app.route('/multi_quiz.html')
+def multi_quiz():
+    (sprite1, sprite2, pokemon1, pokemon2, move, type_sprite, movetype, multiplier) = get_quiz_questions("multi_quiz")
     global count
     global correctAnswers
     correctAnswers.append(float(multiplier))
@@ -60,42 +61,31 @@ def quiz():
     if count > 10:
         return results()
     else:
-        return render_template('quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
+        return render_template('multi_quiz.html', count=count, sprite1=sprite1, sprite2=sprite2,
                                pokemon1=pokemon1, pokemon2=pokemon2, move=move, type_sprite=type_sprite, movetype=movetype, multiplier=multiplier)
- 
 
-def get_quiz_questions():
-    """ with open('path/to/quiz_questions.sql', 'r') as file:
-        query = file.read() """
-    query = "SELECT * FROM pokemon ORDER BY RANDOM() LIMIT 2;"  
+@app.route('/stat_quiz.html')
+def stat_quiz():
+    (pokemon1, stat1, sprite1, pokemon2, stat2, sprite2, pokemon3, stat3, sprite3, pokemon4, stat4, sprite4, stat, answer) = get_quiz_questions("stat_quiz")
+    global count
+    global correctAnswers
+    correctAnswers.append(int(answer))
+    count = count + 1
+    if count > 10:
+        return results()
+    else:
+        return render_template('stat_quiz.html', count=count, pokemon1=pokemon1, pokemon2=pokemon2, pokemon3=pokemon3, pokemon4=pokemon4,
+                                stat1=stat1, stat2=stat2, stat3=stat3, stat4=stat4, 
+                                sprite1=sprite1, sprite2=sprite2, sprite3=sprite3, sprite4=sprite4, stat=stat, answer=answer)
 
-    defpokemon = get_defpokemon(cursor)
-    poke_and_move = get_poke_and_move(cursor)
-    defpoke = defpokemon[0]['pokemon']
-    defpokesprite = defpokemon[0]['sprite']
-    atkpoke = poke_and_move[0]['pokemon']
-    atkpokesprite = poke_and_move[0]['sprite']
-    move = poke_and_move[0]['move']
-    movetype = poke_and_move[0]['movetype']
-    type_relations = get_type_relations(defpoke, move, cursor)
-    type_sprite = get_type_sprite(movetype)
 
-    multiplier = 1
-    for type in poke_and_move:
-        if type['poketype'] == poke_and_move[0]['movetype']:
-            multiplier = multiplier * 1.5
-    for relation in type_relations:
-        if relation[0] == 'weakness':
-            multiplier = multiplier * 2
-        elif relation[0] == 'resistance':
-            multiplier = multiplier * 0.5
-        elif relation[0] == 'immunity':
-            multiplier = multiplier * 0
-    print(move)
-    print(type_sprite + "\n")
-    print(atkpokesprite + "\n")
-    
-    return (atkpokesprite, defpokesprite, atkpoke, defpoke, move, type_sprite, movetype, multiplier)
+def get_quiz_questions(quiz_type):
+
+    if quiz_type == "multi_quiz":
+        return get_multi_quiz_question(cursor)
+    elif quiz_type == "stat_quiz":
+        return get_stat_quiz_question(cursor)
+        
 
 
 
