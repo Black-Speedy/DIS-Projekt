@@ -17,7 +17,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="postgres",
     user="postgres",
-    password="miramax1"
+    password=""
 )
 
 cursor = conn.cursor(cursor_factory=DictCursor)
@@ -59,8 +59,6 @@ def hints_start():
 @app.route('/results.html', methods=['POST'])
 def results():
     global answers
-    print("answers: ", answers)
-    print(answers)
     global score
     score = calculate_score(answers, correctAnswers)
     return render_template('results.html', the_title='Results', answers=answers, correctAnswers=correctAnswers, score=score)
@@ -141,7 +139,6 @@ def get_answer():
     x = request.form.get('answer')
     global answers
     answers.append(float(x))
-    print(answers)
     if current_quiz == "stat_quiz":
         return stat_quiz()
     elif current_quiz == "multi_quiz":
