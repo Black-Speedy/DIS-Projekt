@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="w3-container w3-center">
+
+    <h1>Multiplier Quiz</h1>
+    <p> The goal of this quiz is to guess which pokemon has the highest stat. </p>
+  
+    <h2> Rules </h2>
+    <p> You will be shown 4 pokemon and a question in the middle asking you which of the 4 pokemon has the highest of a given stat. If 2 or more pokemon share the highest value, they will all be correct. </p>
+  
+    <h2> Hints </h2>
+  
+    <ul>
+        <li> A pokemon has 6 different stats: hp, attack, defence, special attack (spatk), special defence (spedef), and speed. As well as the "total" which is the sum of all its stats.</li>
+    </ul>
+    <br>
+  
+    <div>
+       <button class="w3-button w3-light-blue" id="b_1" style="height:80px;width:150px" onclick="window.location.href='{{ url_for('stat_quiz') }}'">Start Quiz</button>
+    </div>
+  
+  </div>
+
+  {% endblock %}

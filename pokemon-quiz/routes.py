@@ -10,38 +10,44 @@ count = 0
 answers = []
 correctAnswers = []
 score = 0
+current_quiz = ""
 
 conn = psycopg2.connect(
     host="localhost",
     database="postgres",
     user="postgres",
-    password="0301"
+    password="miramax1"
 )
 
 cursor = conn.cursor(cursor_factory=DictCursor)
+
+def reset_count():
+    global count
+    count = 0
+    global answers
+    answers = []
+    global correctAnswers
+    correctAnswers = []
+    global current_quiz
+    current_quiz = ""
 
 # two decorators, same function
 @app.route('/')
 @app.route('/index.html')
 def index():
-    global count
-    count = 0
-    global answers
-    answers = []
-    global correctAnswers
-    correctAnswers = []
+    reset_count()
     return render_template('index.html', the_title='Pokemon Quiz')
 
 
 @app.route('/multiquiz_startpage.html')
 def multi_start():
-    global count
-    count = 0
-    global answers
-    answers = []
-    global correctAnswers
-    correctAnswers = []
+    reset_count()
     return render_template('mult_startpg.html')
+
+@app.route('/statquiz_startpage.html')
+def stat_start():
+    reset_count()
+    return render_template('stat_startpg.html')
 
 
 @app.route('/results.html', methods=['POST'])
@@ -61,6 +67,8 @@ def multi_quiz():
     global correctAnswers
     correctAnswers.append(float(multiplier))
     count = count + 1
+    global current_quiz
+    current_quiz = "multi_quiz"
 
     if count > 10:
         return results()
@@ -76,6 +84,9 @@ def stat_quiz():
     global correctAnswers
     correctAnswers.append(int(answer))
     count = count + 1
+    global current_quiz
+    current_quiz = "stat_quiz"
+
     if count > 10:
         return results()
     else:
@@ -106,7 +117,12 @@ def get_answer():
     global answers
     answers.append(float(x))
     print(answers)
-    return multi_quiz()
+    if current_quiz == "stat_quiz":
+        return stat_quiz()
+    elif current_quiz == "multi_quiz":
+        return multi_quiz()
+    else:
+        return "error"
     
 
 if __name__ == '__main__':

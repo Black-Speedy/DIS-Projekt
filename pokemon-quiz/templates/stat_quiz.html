@@ -2,7 +2,7 @@
 
 {% block body %}
 
-
+  
 <body>
   <!-- There should be 4 buttoms for possible answers -->
  
@@ -10,13 +10,13 @@
 
 <div class="w3-row-padding">
   <div class="w3-third">
-    <div class="w3-card-4">
-      <img src={{sprite1}}  alt="Pokemon 1" style="width:80%">
+    <div class="w3-card-4 w3-light-blue" id="b_1" onclick="myFunction(event, {{stat1}})" type="submit" name="answer" value="{{stat1}}">
+      <img  src={{sprite1}}  alt="Pokemon 1" style="width:80%">
       <div>
         <p id="poke1">{{pokemon1}}</p>
       </div>
     </div>
-    <div class="w3-card-4">
+    <div class="w3-card-4 w3-light-blue" id="b_3" onclick="myFunction(event, {{stat3}})" type="submit" name="answer" value="{{stat3}}">
       <img src={{sprite3}}  alt="Pokemon 1" style="width:80%">
       <div>
         <p id="poke3">{{pokemon3}}</p>
@@ -38,13 +38,13 @@
     </div>
   </div>
   <div class="w3-third">
-    <div class="w3-card-4">
+    <div class="w3-card-4 w3-light-blue" id="b_2" onclick="myFunction(event, {{stat2}})" type="submit" name="answer" value="{{stat2}}">
       <img src={{sprite2}}  alt="Pokemon 2" style="width:80%">
       <div>
         <p id="poke2">{{pokemon2}}</p>
       </div>
     </div>
-    <div class="w3-card-4">
+    <div class="w3-card-4 w3-light-blue" id="b_4" onclick="myFunction(event, {{stat4}})" type="submit" name="answer" value="{{stat4}}">
       <img src={{sprite4}}  alt="Pokemon 2" style="width:80%">
       <div>
         <p id="poke4">{{pokemon4}}</p>
@@ -54,53 +54,42 @@
 </div>
 
 
-  <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
-
 <script>
-  function nextFunction() {
-    //disable button class
-    window.location.href = '{{ url_for('stat_quiz') }}';
-  }
-</script>
+  function myFunction(e, value) {
 
-
-<script>
-  function myFunction(e) {
-    
     document.getElementById("answer").innerHTML = "Answer: {{answer}}";
     document.getElementById("poke1").innerHTML = "{{pokemon1}}:  {{stat1}}";
     document.getElementById("poke2").innerHTML = "{{pokemon2}}:  {{stat2}}";
     document.getElementById("poke3").innerHTML = "{{pokemon3}}:  {{stat3}}";
     document.getElementById("poke4").innerHTML = "{{pokemon4}}:  {{stat4}}";
     document.getElementById("next_button").disabled = false;
-    e.currentTarget.setAttribute("class", "w3-button w3-red");
+    e.currentTarget.setAttribute("class", "w3-card-4 w3-red");
 
-    window.setTimeout(myHelper("{{answer}}"), 1); 
+    valuePicked = value;
 
-  }
+    for (var i = 1; i < 5; i++) {
+      var bvalue = document.getElementById("b_" + i).getAttribute('value');
 
-  function myHelper(answer) {
-    for (var i = 1; i < 12; i++) {
-      document.getElementById("b_" + i).disabled = true;
-      var bvalue = document.getElementById("b_" + i).value;
-      if (Math.abs(parseFloat(bvalue) - parseFloat(answer)) < 0.01) {
-        document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
+      if (Math.abs(parseFloat(bvalue) - parseFloat("{{answer}}")) < 0.01) {
+        document.getElementById("b_" + i).setAttribute("class", "w3-card-4 w3-green");
       }
+      document.getElementById("b_" + i).setAttribute("onclick", "");
     }
+
   }
+
+  function nextFunction() {
+        document.getElementById('next_button').value = valuePicked;
+      }
 
 </script>
 
-
+<form action="/get_answer" method="post">
   <div class="w3-bar">
   <br>
-  <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event)" type="submit" name="answer" value="{{stat1}}">{{pokemon1}}</button>
-  <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event)" type="submit" name="answer" value="{{stat2}}">{{pokemon2}}</button>
-  <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event)" type="submit" name="answer" value="{{stat3}}">{{pokemon3}}</button>
-  <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event)" type="submit" name="answer" value="{{stat4}}">{{pokemon4}}</button>
-  <button type="button" class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" disabled>Next</button>
+  <button  class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" type="submit" name="answer" value="{{ valuePicked }}"disabled>Next</button>
   </div>
-
+</form>
 
 </body>
 
