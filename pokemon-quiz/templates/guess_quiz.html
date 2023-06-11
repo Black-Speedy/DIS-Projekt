@@ -1,0 +1,81 @@
+@@ -0,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<body>
+  <p>Question {{count}} of 10</p>
+
+
+  <div class="w3-third">
+    <div class="w3-card-4">
+      <img src={{sprite1}}  alt="Pokemon 1" style="width:90%">
+      <div class="w3-container">
+        <p>{{pokemon1}}</p>
+        </div>
+    </div>
+    </div>
+  <div class="w3-third">
+  <p>{{ move }}</p>
+  <img src=https://media.discordapp.net/attachments/1104761878573494392/1116754753100206131/attack_arrow.png?width=637&height=492  alt="Pokemon 1" style="width:70%">
+  <img src={{type_sprite}} width=160px height=50px>
+</div>
+  <div class="w3-third">
+    <div class="w3-card-4">
+      <img src={{sprite2}}  alt="Pokemon 2" style="width:90%">
+      <div class="w3-container">
+        <p>{{pokemon2}}</p>
+        </div>
+    </div>
+    </div>
+
+
+
+<p id="myText"></p>
+
+  <script>
+    valuePicked = -1;
+
+    function myFunction(e, value) {
+
+      document.getElementById("myText").innerHTML = "Answer: {{multiplier}}";
+      document.getElementById("next_button").disabled = false;
+      e.currentTarget.setAttribute("class", "w3-button w3-red");
+
+      valuePicked = value;
+
+      for (var i = 1; i < 12; i++) {
+        var bvalue = document.getElementById("b_" + i).value;
+
+        if (Math.abs(parseFloat(bvalue) - parseFloat("{{multiplier}}")) < 0.01) {
+          document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
+        }
+        document.getElementById("b_" + i).disabled = true;
+      }
+    }
+
+    function nextFunction() {
+        document.getElementById('next_button').value = valuePicked;
+      }
+  </script>
+
+    <div class="w3-bar">
+    <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event, 0)" type="button" name="answer" value="0">g</button>
+    <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event, 0.25)" type="button" name="answer" value="0.25">u</button>
+    <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event, 0.375)" type="button" name="answer" value="0.375">e</button>
+    <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event, 0.5)" type="button" name="answer" value="0.5">s</button>
+    <button class="w3-button w3-light-blue" id="b_5" onclick="myFunction(event, 0.75)" type="button" name="answer" value="0.75">s</button>
+    <button class="w3-button w3-light-blue" id="b_6" onclick="myFunction(event, 1)" type="button" name="answer" value="1">q</button>
+    <button class="w3-button w3-light-blue" id="b_7" onclick="myFunction(event, 1.5)" type="button" name="answer" value="1.5">u</button>
+    <button class="w3-button w3-light-blue" id="b_8" onclick="myFunction(event, 2)" type="button" name="answer" value="2">i</button>
+    <button class="w3-button w3-light-blue" id="b_9" onclick="myFunction(event, 3)" type="button" name="answer" value="3">z</button>
+    <button class="w3-button w3-light-blue" id="b_10" onclick="myFunction(event, 4)" type="button" name="answer" value="4">!</button>
+    <button class="w3-button w3-light-blue" id="b_11" onclick="myFunction(event, 6)" type="button" name="answer" value="6">!</button>
+    <form action="/get_answer" method="post">
+      <button  class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" type="submit" name="answer" value=""disabled>Next</button>
+    </form>
+    </div>
+</body>
+
+{% endblock %}

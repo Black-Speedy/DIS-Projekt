@@ -1,0 +1,29 @@
+@@ -0,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="w3-container w3-center">
+
+    <h1>Multiplier Quiz</h1>
+    <p> The goal of this quiz is to guess the correct pokemon based on the information you are given. </p>
+  
+    <h2> Rules </h2>
+    <p> You will be given some atributes describing a pokemon. Guess which pokemon is being described.</p>
+  
+    <h2> Hints </h2>
+  
+    <ul>
+        <li> When a move is super-effective againts a type, it is multiplied by 2. </li>
+    </ul>
+    <br>
+  
+    <div>
+       <button class="w3-button w3-light-blue" id="b_1" style="height:80px;width:150px" onclick="window.location.href='{{ url_for('guess_quiz') }}'">Start Quiz</button>
+    </div>
+    <br>
+  
+  </div>
+
+  {% endblock %}

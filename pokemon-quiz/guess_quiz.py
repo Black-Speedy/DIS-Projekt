@@ -1,3 +1,4 @@
+@@ -0,0 +1,151 @@
 from psycopg2.extras import DictCursor
 import psycopg2
 from flask import Flask, render_template, request
@@ -28,8 +29,6 @@ def reset_count():
     answers = []
     global correctAnswers
     correctAnswers = []
-    global current_quiz
-    current_quiz = ""
 
 # two decorators, same function
 @app.route('/')
@@ -123,8 +122,6 @@ def get_quiz_questions(quiz_type):
         return get_multi_quiz_question(cursor)
     elif quiz_type == "stat_quiz":
         return get_stat_quiz_question(cursor)
-    elif quiz_type == "guess_quiz":
-        return get_guess_quiz_question(cursor)
 
 
 def calculate_score(answers, correct_answers):
@@ -149,21 +146,6 @@ def get_answer():
         return guess_quiz()
     else:
         return "error"
-
-@app.route('/restart_quiz', methods=['POST'])
-def restart_quiz():
-    if current_quiz == "stat_quiz":
-        reset_count()
-        return stat_quiz()
-    elif current_quiz == "multi_quiz":
-        reset_count()
-        return  multi_quiz()
-    elif current_quiz == "guess_quiz":
-        reset_count()
-        return  guess_quiz()
-    else:
-        return "error"
-
     
 
 if __name__ == '__main__':
