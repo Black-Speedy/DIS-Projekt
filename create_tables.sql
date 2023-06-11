@@ -16,7 +16,7 @@ Sprite varchar
 );
 
 COPY pokemon
-FROM 'C:/Users/Max/Documents/Github/DIS-Projekt/pokemon-csv-files/pokemon-all-data.csv'
+FROM 'C:\Users\Max\Documents\Github\DIS-Projekt\pokemon-csv-files\pokemon-all-data.csv'
 DELIMITER ','
 CSV HEADER;
 
