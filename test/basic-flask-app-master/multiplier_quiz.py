@@ -102,8 +102,5 @@ def get_multi_quiz_question(cursor):
             multiplier = multiplier * 0.5
         elif relation[0] == 'immunity':
             multiplier = multiplier * 0
-    print(move)
-    print(type_sprite + "\n")
-    print(atkpokesprite + "\n")
     
     return (atkpokesprite, defpokesprite, atkpoke, defpoke, move, type_sprite, movetype, multiplier)

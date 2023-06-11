@@ -8,45 +8,50 @@
  
   <p>Question {{count}} of 10</p>
 
-
+<div class="w3-row-padding">
   <div class="w3-third">
     <div class="w3-card-4">
       <img src={{sprite1}}  alt="Pokemon 1" style="width:80%">
-      <div class="w3-container">
+      <div>
         <p id="poke1">{{pokemon1}}</p>
-        </div>
-    </div>
-  </div>
-  <div class="w3-third">
-    <p>Which one has the highest {{stat}}?</p>
-  </div>
-  <div class="w3-third">
-    <div class="w3-card-4">
-      <img src={{sprite2}}  alt="Pokemon 2" style="width:80%">
-      <div class="w3-container">
-        <p id="poke2">{{pokemon2}}</p>
       </div>
     </div>
-  </div>
-  <div class="w3-third">
     <div class="w3-card-4">
       <img src={{sprite3}}  alt="Pokemon 1" style="width:80%">
-      <div class="w3-container">
+      <div>
         <p id="poke3">{{pokemon3}}</p>
       </div>
     </div>
   </div>
   <div class="w3-third">
-    <p id="answer"></p>
+    <br>
+    <div>
+      <p>Which one has the highest {{stat}}?</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <p id="answer"></p>
+    </div>
   </div>
   <div class="w3-third">
     <div class="w3-card-4">
+      <img src={{sprite2}}  alt="Pokemon 2" style="width:80%">
+      <div>
+        <p id="poke2">{{pokemon2}}</p>
+      </div>
+    </div>
+    <div class="w3-card-4">
       <img src={{sprite4}}  alt="Pokemon 2" style="width:80%">
-      <div class="w3-container">
+      <div>
         <p id="poke4">{{pokemon4}}</p>
       </div>
     </div>
   </div>
+</div>
 
 
   <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
@@ -70,7 +75,7 @@
     document.getElementById("next_button").disabled = false;
     e.currentTarget.setAttribute("class", "w3-button w3-red");
 
-    window.setTimeout(myHelper(answer), 1); 
+    window.setTimeout(myHelper("{{answer}}"), 1); 
 
   }
 
@@ -78,7 +83,6 @@
     for (var i = 1; i < 12; i++) {
       document.getElementById("b_" + i).disabled = true;
       var bvalue = document.getElementById("b_" + i).value;
-
       if (Math.abs(parseFloat(bvalue) - parseFloat(answer)) < 0.01) {
         document.getElementById("b_" + i).setAttribute("class", "w3-button w3-green");
       }

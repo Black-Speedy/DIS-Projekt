@@ -35,6 +35,4 @@ def get_stat_quiz_question(cursor):
 
     stats = stats + (stat, max(pokemon_stats[0][stat], pokemon_stats[1][stat], pokemon_stats[2][stat], pokemon_stats[3][stat]))
 
-    print(stats)
-
     return stats
