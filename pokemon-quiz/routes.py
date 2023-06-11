@@ -10,7 +10,6 @@ count = 0
 answers = []
 correctAnswers = []
 score = 0
-current_quiz = ""
 
 conn = psycopg2.connect(
     host="localhost",
@@ -42,8 +41,6 @@ def multi_start():
     answers = []
     global correctAnswers
     correctAnswers = []
-    global current_quiz
-    current_quiz = "multi_quiz"
     return render_template('mult_startpg.html')
 
 
@@ -75,13 +72,10 @@ def multi_quiz():
 @app.route('/stat_quiz.html')
 def stat_quiz():
     (pokemon1, stat1, sprite1, pokemon2, stat2, sprite2, pokemon3, stat3, sprite3, pokemon4, stat4, sprite4, stat, answer) = get_quiz_questions("stat_quiz")
-    answer = int(answer)
     global count
     global correctAnswers
-    correctAnswers.append(answer)
+    correctAnswers.append(int(answer))
     count = count + 1
-    global current_quiz
-    current_quiz = "stat_quiz"
     if count > 10:
         return results()
     else:
@@ -112,13 +106,8 @@ def get_answer():
     global answers
     answers.append(float(x))
     print(answers)
-    if current_quiz == "stat_quiz":
-        return stat_quiz()
-    elif current_quiz == "multi_quiz":
-        return multi_quiz()
-    else:
-        return "error"
-        
+    return multi_quiz()
     
+
 if __name__ == '__main__':
     app.run(debug=True)
