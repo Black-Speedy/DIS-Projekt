@@ -13,6 +13,7 @@ Run the code below to install the necessary modules.
 
 ## Running flask
 ### The python way
+Run the code below inside the pokemon-quiz folder to start the website.
 
 $ python3 routes.py
 
