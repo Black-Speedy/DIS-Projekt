@@ -34,7 +34,7 @@
 
   <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
 
-<div id="myText"></div>
+<p id="myText"></p>
 
 <script>
   function nextFunction() {
@@ -47,15 +47,11 @@
 <script>
   function myFunction(e) {
     
-    var multiplier = "{{multiplier}}";
-    var text = "Answer: " + multiplier;
-    var paragraph = document.createElement("p");
-    paragraph.textContent = text;
-    document.getElementById("myText").appendChild(paragraph);
+    document.getElementById("myText").innerHTML = "Answer: {{multiplier}}";
     document.getElementById("next_button").disabled = false;
     e.currentTarget.setAttribute("class", "w3-button w3-red");
 
-    window.setTimeout(myHelper(multiplier), 1); 
+    window.setTimeout(myHelper("{{multiplier}}"), 1); 
 
   }
 

@@ -11,47 +11,45 @@
 
   <div class="w3-third">
     <div class="w3-card-4">
-      <img src={{sprite1}}  alt="Pokemon 1" style="width:70%">
+      <img src={{sprite1}}  alt="Pokemon 1" style="width:80%">
       <div class="w3-container">
-        <p>{{pokemon1}}</p>
+        <p id="poke1">{{pokemon1}}</p>
         </div>
     </div>
-    </div>
+  </div>
   <div class="w3-third">
-    <br>
-</div>
+    <p>Which one has the highest {{stat}}?</p>
+  </div>
   <div class="w3-third">
     <div class="w3-card-4">
-      <img src={{sprite2}}  alt="Pokemon 2" style="width:70%">
+      <img src={{sprite2}}  alt="Pokemon 2" style="width:80%">
       <div class="w3-container">
-        <p>{{pokemon2}}</p>
-        </div>
+        <p id="poke2">{{pokemon2}}</p>
+      </div>
     </div>
+  </div>
+  <div class="w3-third">
+    <div class="w3-card-4">
+      <img src={{sprite3}}  alt="Pokemon 1" style="width:80%">
+      <div class="w3-container">
+        <p id="poke3">{{pokemon3}}</p>
+      </div>
     </div>
-    <div class="w3-third">
-        <div class="w3-card-4">
-          <img src={{sprite3}}  alt="Pokemon 1" style="width:70%">
-          <div class="w3-container">
-            <p>{{pokemon3}}</p>
-            </div>
-        </div>
-        </div>
-      <div class="w3-third">
-      <p>Which one has the highest {{stat}}?</p>
+  </div>
+  <div class="w3-third">
+    <p id="answer"></p>
+  </div>
+  <div class="w3-third">
+    <div class="w3-card-4">
+      <img src={{sprite4}}  alt="Pokemon 2" style="width:80%">
+      <div class="w3-container">
+        <p id="poke4">{{pokemon4}}</p>
+      </div>
     </div>
-      <div class="w3-third">
-        <div class="w3-card-4">
-          <img src={{sprite4}}  alt="Pokemon 2" style="width:70%">
-          <div class="w3-container">
-            <p>{{pokemon4}}</p>
-            </div>
-        </div>
-        </div>
+  </div>
 
 
   <!-- <button onclick="myFunction()" id="next_button" disabled >Next question</button>-->
-
-<div id="myText"></div>
 
 <script>
   function nextFunction() {
@@ -64,11 +62,11 @@
 <script>
   function myFunction(e) {
     
-    var answer = "{{answer}}";
-    var text = "Answer: " + answer;
-    var paragraph = document.createElement("p");
-    paragraph.textContent = text;
-    document.getElementById("myText").appendChild(paragraph);
+    document.getElementById("answer").innerHTML = "Answer: {{answer}}";
+    document.getElementById("poke1").innerHTML = "{{pokemon1}}:  {{stat1}}";
+    document.getElementById("poke2").innerHTML = "{{pokemon2}}:  {{stat2}}";
+    document.getElementById("poke3").innerHTML = "{{pokemon3}}:  {{stat3}}";
+    document.getElementById("poke4").innerHTML = "{{pokemon4}}:  {{stat4}}";
     document.getElementById("next_button").disabled = false;
     e.currentTarget.setAttribute("class", "w3-button w3-red");
 
@@ -89,16 +87,16 @@
 
 </script>
 
-  <form action="/get_answer" method="post">
-    <div class="w3-bar">
-    <br>
-    <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event)" type="submit" name="answer" value="{{stat1}}">{{pokemon1}}</button>
-    <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event)" type="submit" name="answer" value="{{stat2}}">{{pokemon2}}</button>
-    <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event)" type="submit" name="answer" value="{{stat3}}">{{pokemon3}}</button>
-    <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event)" type="submit" name="answer" value="{{stat4}}">{{pokemon4}}</button>
-    <button type="button" class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" disabled>Next</button>
-    </div>
-  </form>
+
+  <div class="w3-bar">
+  <br>
+  <button class="w3-button w3-light-blue" id="b_1" onclick="myFunction(event)" type="submit" name="answer" value="{{stat1}}">{{pokemon1}}</button>
+  <button class="w3-button w3-light-blue" id="b_2" onclick="myFunction(event)" type="submit" name="answer" value="{{stat2}}">{{pokemon2}}</button>
+  <button class="w3-button w3-light-blue" id="b_3" onclick="myFunction(event)" type="submit" name="answer" value="{{stat3}}">{{pokemon3}}</button>
+  <button class="w3-button w3-light-blue" id="b_4" onclick="myFunction(event)" type="submit" name="answer" value="{{stat4}}">{{pokemon4}}</button>
+  <button type="button" class="w3-button w3-light-blue" onclick="nextFunction()" id="next_button" disabled>Next</button>
+  </div>
+
 
 </body>
 
